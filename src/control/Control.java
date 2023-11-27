@@ -1,13 +1,11 @@
 package control;
 
-import java.applet.AudioClip;
 import java.net.URLClassLoader;
 import java.util.ArrayList;
 import java.util.List;
 import java.util.Timer;
 import java.util.TimerTask;
 
-import javax.swing.JApplet;
 import javax.swing.JOptionPane;
 
 import model.BackgroundModel;
@@ -35,38 +33,14 @@ import util.FileUtil;
 import util.MyThread;
 import context.GameState;
 
-/**
- * 
- * 游戏总控制器
- * 
- * 
- * @author Administrator
- * 
- */
+//游戏总控制器
 public class Control {
-	/**
-	 * 
-	 * 游戏tick值
-	 * 
-	 */
 	public static long tick;
-	/**
-	 * 
-	 * 每秒画面刷新频率
-	 * 
-	 */
+	//每秒画面刷新频率
 	public static int rate = 30;
-	/**
-	 * 
-	 * 游戏主面板
-	 * 
-	 */
+	//游戏主面板
 	private JPanelGame panel;
-	/**
-	 * 
-	 * 游戏对象
-	 * 
-	 */
+	//游戏对象
 	private GameRunning run = null;
 
 	private List<Port> models = new ArrayList<Port>();
@@ -81,11 +55,7 @@ public class Control {
 
 	private Music music = null;
 	
-	/**
-	 * 
-	 * 游戏计时器
-	 * 
-	 */
+	//计时器
 	private Timer gameTimer = null;
 
 	public Control() {
@@ -552,7 +522,7 @@ public class Control {
 		((Shop_) b).createCards();
 		// 为商店面板更新新的卡片商品
 		this.panel.getShop().addCards((Shop_) b);
-		// 將商店面板推送至頂
+		// ?⑸痰昝姘逋扑椭另?
 		this.panel.getShop().moveToFront();
 		} else {
 			this.run.nextState();
@@ -1478,8 +1448,9 @@ public class Control {
 	 * 游戏结束~
 	 * 
 	 * 
-	 * @param winer
+	 *
 	 */
+	//@param winer
 	public void gameOver () {
 		this.run.setNowPlayerState(GameRunning.GAME_STOP);
 		this.panel.getBackgroundUI().moveToFront();
