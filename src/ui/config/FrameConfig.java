@@ -60,15 +60,15 @@ public class FrameConfig extends JFrame {
 	/**
 	 * 1P 2P可选人物
 	 */
-	private int[] chooses = { 0, 0 };
+	private int[] chooses = { 0, 0 ,0,0};
 	/**
 	 * 1P 2P已选人物
 	 */
-	private int[] selected = { -1, -2 };
+	private int[] selected = { -1, -2 ,-3,-4};
 	/**
 	 * 1P 2P已填名字
 	 */
-	private String[] selectedName = { "", "" };
+	private String[] selectedName = { "", "", "",""};
 
 	//主面板
 	private JFrameGame jFrameGame;
@@ -254,8 +254,8 @@ public class FrameConfig extends JFrame {
 		jp.setLayout(null);
 		jp.setBackground(new Color(235,236,237));
 
-		PlayerConfig player1=new PlayerConfig();
-		PlayerConfig player2=new PlayerConfig();
+		PlayerConfig player1=new PlayerConfig(0);
+		PlayerConfig player2=new PlayerConfig(1);
 		// 增加1P面板
 		addPlayerConfig(playerCoordinateX, playerCoordinateY,player1, jp);
 		// 增加2P面板
@@ -273,13 +273,13 @@ public class FrameConfig extends JFrame {
 			@Override
 			public void actionPerformed(ActionEvent arg0){
 				if(playerNum>=4) return;
-				PlayerConfig newPlayer=new PlayerConfig();
+				PlayerConfig newPlayer=new PlayerConfig(playerNum);
 				addPlayerConfig(playerCoordinateX, playerCoordinateY, newPlayer,panel);
 				playerList.add(newPlayer);
 				playerNum+=1;
 			}
 		});
-		jbnAddPlayer.setBounds(12, 235, 80, 30);
+		jbnAddPlayer.setBounds(100, 235, 80, 30);
 		panel.add(jbnAddPlayer);
 	}
 
@@ -321,7 +321,7 @@ public class FrameConfig extends JFrame {
 	 */
 	private void addPlayerConfig(int x, int y, PlayerConfig player,JPanel jp) {
 		// 创建 人物图像label
-		player.jlPlayerChoose = new JLabel(img[chooses[0]]);
+		player.jlPlayerChoose = new JLabel(img[chooses[player.id]]);
 		player.jlPlayerChoose.setBounds(x + 8, y, 128, 128);
 		// 创建人物图像已选择label
 		player.jlPlayerSelected.setBounds(x + 8, y, 128, 128);
@@ -338,10 +338,10 @@ public class FrameConfig extends JFrame {
 			@Override
 			public void actionPerformed(ActionEvent e) {
 				// 设置为循环
-				if (chooses[0] <= 0) {
-					chooses[0] = img.length;
+				if (chooses[player.id] <= 0) {
+					chooses[player.id] = img.length;
 				}
-				player.jlPlayerChoose.setIcon(img[--chooses[0]]);
+				player.jlPlayerChoose.setIcon(img[--chooses[player.id]]);
 			}
 		});
 
@@ -354,10 +354,10 @@ public class FrameConfig extends JFrame {
 			@Override
 			public void actionPerformed(ActionEvent arg0) {
 				// 设置循环
-				if (chooses[0] >= img.length - 1) {
-					chooses[0] = -1;
+				if (chooses[player.id] >= img.length - 1) {
+					chooses[player.id] = -1;
 				}
-				player.jlPlayerChoose.setIcon(img[++chooses[0]]);
+				player.jlPlayerChoose.setIcon(img[++chooses[player.id]]);
 			}
 		});
 		jp.add(player.rightButton);
@@ -367,9 +367,22 @@ public class FrameConfig extends JFrame {
 		player.jbnPlayerNameLabel.setBounds(x + 12, y + 128 + 36, 50, 30);
 		player.jbnPlayerNameField.setBounds(x + 12 + 30, y + 128 + 36, 120 - 30, 30);
 
+		player.confirmButton.addActionListener(new ActionListener() {
+			@Override
+			public void actionPerformed(ActionEvent e) {
+				if (!player.jbnPlayerNameField.getText().equals("")) {
+					selectedName[player.id] = player.jbnPlayerNameField.getText();
+					player.jbnPlayerNameField.setEditable(false);
+					player.jbnPlayerNameField.setEnabled(false);
+				}
+
+			}
+		});
+
 		//添加至面板上
-		jp.add(player.jbnPlayerNameLabel);
-		jp.add(player.jbnPlayerNameField);
+		jp.add(player.jbnPlayerNameLabel);		//"Name"标签
+		jp.add(player.jbnPlayerNameField);		//Name输入框
+		jp.add(player.confirmButton);			//Confirm按钮
 	}
 
 	/**
@@ -397,17 +410,14 @@ public class FrameConfig extends JFrame {
 
 			@Override
 			public void actionPerformed(ActionEvent e) {
-				if (selected[0] < 0 || selected[1] < 0) {
-					JOptionPane.showMessageDialog(null, "请完成人物设置!");
-				} else if (selectedName[0].equals("")
-						|| selectedName[1].equals("")) {
-					JOptionPane.showMessageDialog(null, "请完成名字设置!");
-				} else {
-					int choose = JOptionPane.showConfirmDialog(null, "是否开始？");
-					if (choose == JOptionPane.OK_OPTION) {
-						// 开始游戏
-						startGame();
-					}
+				for(int i=0;i<playerNum;i++){
+					if(selected[i]<0) JOptionPane.showMessageDialog(null, "Please choose different characters for different players!");
+					if(selectedName[i].equals("")) JOptionPane.showMessageDialog(null, "Please input player's name!");
+				}
+				int choose = JOptionPane.showConfirmDialog(null, "Ready to start？");
+				if (choose == JOptionPane.OK_OPTION) {
+					// 开始游戏
+					startGame();
 				}
 			}
 
@@ -429,13 +439,11 @@ public class FrameConfig extends JFrame {
 			 */
 			private void dealPlayers(Control control) {
 				List<PlayerModel> tempPlayer = control.getPlayers();
-				// 传入名字
-				tempPlayer.get(0).setName(selectedName[0]);
-				tempPlayer.get(1).setName(selectedName[1]);
-				// 传入使用角色编号
-				tempPlayer.get(0).setPart(selected[0]);
-				tempPlayer.get(1).setPart(selected[1]);
-				// 传入 角色对立角色
+				for(int i=0;i<playerNum;i++){
+					tempPlayer.get(i).setName(selectedName[i]);		// 传入名字
+					tempPlayer.get(i).setPart(selected[i]);			// 传入使用角色编号
+				}
+				// 传入 角色对立角色(需修改)
 				tempPlayer.get(0).setOtherPlayer(tempPlayer.get(1));
 				tempPlayer.get(1).setOtherPlayer(tempPlayer.get(0));
 			}
