@@ -13,7 +13,7 @@ import model.buildings.Building;
 /**
  * ·¿ÎÝË¢ÐÂ²ã
  * 
- * @author MOVELIGHTS
+ * @author HCR
  * 
  */
 public class Buildings extends Layer {

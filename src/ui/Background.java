@@ -12,7 +12,7 @@ import model.BackgroundModel;
  * 
  * ±³¾°¸üÐÂ²ã
  * 
- * @author MOVELIGHTS
+ * @author HCR
  * 
  */
 public class Background extends Layer {

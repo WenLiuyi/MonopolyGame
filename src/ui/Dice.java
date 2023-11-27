@@ -14,7 +14,7 @@ import model.DiceModel;
  * 
  * 骰子掷点层
  * 
- * @author MOVELIGHTS
+ * @author HCR
  * 
  */
 @SuppressWarnings("serial")
@@ -42,7 +42,7 @@ public class Dice extends Layer {
 		this.paintDice(g, -12, -15);
 		//骰子按钮显示
 		this.showDice();
-		// 骰子按钮刷新
+		//骰子按钮刷新
 		diceButton.update(g);
 	}
 

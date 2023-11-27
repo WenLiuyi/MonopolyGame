@@ -15,7 +15,7 @@ import model.PlayerModel;
  * 
  * 玩家位置数据更新层
  * 
- * @author MOVELIGHTS
+ * @author HCR
  * 
  */
 public class Players extends Layer {
