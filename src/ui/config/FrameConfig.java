@@ -41,44 +41,33 @@ import control.GameRunning;
  * */
 public class FrameConfig extends JFrame {
 
-	private JButton jbnStart = new JButton("开始游戏");
+	private JButton jbnStart = new JButton("Start");
 	//private JButton jbnradom = new JButton("随机");
-	private JButton jbnCancel = new JButton("重置设定");
+	private JButton jbnCancel = new JButton("Reset");
 
-	private JButton jbnPlayer01 = new JButton("1P确认角色");
-	private JLabel jbnPlayerNameLabel01 = new JLabel("名字:");
+	private JButton jbnPlayer01 = new JButton("Confirm Role");
+	private JLabel jbnPlayerNameLabel01 = new JLabel("Name:");
 	private JTextField jbnPlayerNameField01 = new JTextField(12);
-	private JButton jbnPlayerName01 = new JButton("1P确认名字");
+	private JButton jbnPlayerName01 = new JButton("Confirm Name");
 
-	private JButton jbnPlayer02 = new JButton("2P确认角色");
-	private JLabel jbnPlayerNameLabel02 = new JLabel("名字:");
+	private JButton jbnPlayer02 = new JButton("Confirm Role");
+	private JLabel jbnPlayerNameLabel02 = new JLabel("Name:");
 	private JTextField jbnPlayerNameField02 = new JTextField(12);
-	private JButton jbnPlayerName02 = new JButton("2P确认名字");
+	private JButton jbnPlayerName02 = new JButton("Confirm Name");
 
-	/**
-	 * 选项卡
-	 * */
-	private JTabbedPane tabs;
+	private JTabbedPane tabs;		//选项卡
 
-	/**
-	 * 可选图片
-	 * */
-	private ImageIcon[] img = Photo.PLAYER_CHOOSE;
-	/**
-	 * 人物1
-	 **/
+	private ImageIcon[] img = Photo.PLAYER_CHOOSE;	//可选图片列表
+
+	//玩家1:
 	private JLabel jlPlayer01Choose = null;
-	private final JLabel jlPlayer01Selected = new JLabel(
-			Photo.PLAYER_01_SELECTED);
+	private final JLabel jlPlayer01Selected = new JLabel(Photo.PLAYER_01_SELECTED);
 	private JButton leftButton01;
 	private JButton rightButton01;
 
-	/**
-	 * 人物2
-	 **/
+	//玩家2
 	private JLabel jlPlayer02Choose = null;
-	private final JLabel jlPlayer02Selected = new JLabel(
-			Photo.PLAYER_02_SELECTED);
+	private final JLabel jlPlayer02Selected = new JLabel(Photo.PLAYER_02_SELECTED);
 	private JButton leftButton02;
 	private JButton rightButton02;
 	/**
@@ -94,17 +83,14 @@ public class FrameConfig extends JFrame {
 	 */
 	private String[] selectedName = { "", "" };
 
-	/**
-	 * 
-	 * 主面板
-	 * 
-	 * */
+	//主面板
 	private JFrameGame jFrameGame;
 
+	//等待界面和游戏主界面间的过渡
 	public FrameConfig(WaitFrame wFrame,JFrameGame jFrameGame) {
 		wFrame.setVisible(false);
 		this.jFrameGame = jFrameGame;
-		setTitle("用户数据设定");
+		setTitle("User Setting");
 		this.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
 		// 设置布局管理器为边界布局
 		this.setLayout(new BorderLayout());
@@ -113,24 +99,22 @@ public class FrameConfig extends JFrame {
 		// 添加按钮面板
 		this.add(this.createButtonPanel(), BorderLayout.SOUTH);
 		this.setResizable(false);
-		this.setSize(380, 370);
+		this.setSize(1200, 800);
 		// 居中对齐
 		FrameUtil.setFrameCenter(this);
 		setVisible(true);
 	}
 
-	/**
-	 * 添加主面板
-	 */
+	//添加主面板
 	private JTabbedPane createMainPanel() {
 		this.tabs = new JTabbedPane();
 		this.tabs.setOpaque(false);
-		this.tabs.add("人物设置", this.createPlayerSelectPanel());
-		this.tabs.setToolTipTextAt(0, "完成人物设置");
-		this.tabs.add("场景设置", this.createMapSelectPanel());
-		this.tabs.setToolTipTextAt(1, "可以设置游戏场景");
-		this.tabs.add("游戏设置", this.createGameSelectPanel());
-		this.tabs.setToolTipTextAt(2, "可以设置游戏胜利条件等...");
+		this.tabs.add("Characters", this.createPlayerSelectPanel());
+		this.tabs.setToolTipTextAt(0, "choose Characters");
+		this.tabs.add("Maps", this.createMapSelectPanel());
+		this.tabs.setToolTipTextAt(1, "Choose map");
+		this.tabs.add("Rules", this.createGameSelectPanel());
+		this.tabs.setToolTipTextAt(2, "Set victory conditions");
 		return tabs;
 	}
 
@@ -143,11 +127,11 @@ public class FrameConfig extends JFrame {
 		JPanel panel = new JPanel(new GridLayout(0, 1));
 		panel.setBackground(new Color(235,236,237));
 
-		// --------------------------------
+		//1.设置游戏天数：
 		final JPanel dayPanel = new JPanel();
 		dayPanel.setBorder(BorderFactory.createTitledBorder(""));
-		JLabel day = new JLabel("游戏天数");
-		final String[] days = { "无限制", "20", "40", "80", "120", "240", "480" };
+		JLabel day = new JLabel("Game Days");
+		final String[] days = { "no limit", "20", "40", "80", "120", "240", "480" };
 		final Choice daysChoice = new Choice();
 
 		for (String a : days) {
@@ -158,21 +142,21 @@ public class FrameConfig extends JFrame {
 			@Override
 			public void itemStateChanged(ItemEvent arg0) {
 				String str = days[daysChoice.getSelectedIndex()];
-				if (str.equals("无限制")) {
+				if (str.equals("no limit")) {
 					GameRunning.GAME_DAY = -1;
 				} else {
-					GameRunning.GAME_DAY = Integer.parseInt(str);
+					GameRunning.GAME_DAY = Integer.parseInt(str);	//转为整数
 				}
 			}
 		});
 		dayPanel.add(day);
 		dayPanel.add(daysChoice);
 
-		// --------------------------------
+		//2.设置获胜所需钱数：
 		JPanel moneyPanel = new JPanel();
 		moneyPanel.setBorder(BorderFactory.createTitledBorder(""));
-		JLabel money = new JLabel("胜利金钱");
-		final String[] money_ = { "无限制", "10000", "20000", "40000", "80000",
+		JLabel money = new JLabel("Money for victory");
+		final String[] money_ = { "no limit", "10000", "20000", "40000", "80000",
 				"200000" };
 		final Choice moneyChoice = new Choice();
 		for (String a : money_) {
@@ -183,7 +167,7 @@ public class FrameConfig extends JFrame {
 			@Override
 			public void itemStateChanged(ItemEvent arg0) {
 				String str = money_[moneyChoice.getSelectedIndex()];
-				if (str.equals("无限制")) {
+				if (str.equals("no limit")) {
 					GameRunning.MONEY_MAX = -1;
 				} else {
 					GameRunning.MONEY_MAX = Integer.parseInt(str);
@@ -192,11 +176,11 @@ public class FrameConfig extends JFrame {
 		});
 		moneyPanel.add(money);
 		moneyPanel.add(moneyChoice);
-		// ---------------------------------
-		// --------------------------------
+
+		//3.设置玩家初始资本：
 		JPanel cashPanel = new JPanel();
 		cashPanel.setBorder(BorderFactory.createTitledBorder(""));
-		JLabel cash = new JLabel("玩家初始金钱");
+		JLabel cash = new JLabel("initial capital");
 		final String[] cash_ = { "1000", "2000", "5000", "7000", "10000",
 				"20000" };
 		final Choice cashChoice = new Choice();
@@ -215,6 +199,7 @@ public class FrameConfig extends JFrame {
 		cashPanel.add(cash);
 		cashPanel.add(cashChoice);
 
+		//3.设置游戏的胜利条件：
 		JPanel infoPanel = new JPanel();
 		infoPanel.setBorder(BorderFactory.createTitledBorder(""));
 		JLabel info = new JLabel();
@@ -238,28 +223,28 @@ public class FrameConfig extends JFrame {
 		jp.setLayout(new GridLayout());
 		jp.setBackground(new Color(235,236,237));
 		JPanel lPane = new JPanel(new BorderLayout());
-		String[] maps = { "\"LOVE地图\"", "\"鬼屋地图\"", "\"好运地图\"" };
+		String[] maps = { "\"China Map\"", "\"World Map\"" };
 		final ImageIcon[] maps1 = {
 				new ImageIcon("images/other/1.png"),
 				new ImageIcon("images/other/2.png"),
-				new ImageIcon("images/other/3.png") };
+				//new ImageIcon("images/other/3.png")
+		};
 		final JList jlst = new JList(maps);
 		jlst.setSelectedIndex(0);
 		final JLabel mapV = new JLabel(maps1[0]);
-		final JButton ok = new JButton("确定");
+		final JButton ok = new JButton("Confirm");
 		ok.addActionListener(new ActionListener() {
-
 			@Override
 			public void actionPerformed(ActionEvent arg0) {
 				GameRunning.MAP = jlst.getSelectedIndex() + 1;
-				ok.setText("已选");
+				ok.setText("selected");
 			}
 		});
 		jlst.addListSelectionListener(new ListSelectionListener() {
 			@Override
 			public void valueChanged(ListSelectionEvent e) {
 				mapV.setIcon(maps1[jlst.getSelectedIndex()]);
-				ok.setText("确定");
+				ok.setText("Confirm");
 			}
 		});
 		lPane.add(jlst);
@@ -340,7 +325,7 @@ public class FrameConfig extends JFrame {
 		jlPlayer01Selected.setVisible(false);
 		// 创建左按钮
 		leftButton01 = this.createButton(x, 92 + y, Photo.BUTTON_LEFT, 'a');
-		// 添加监听事件
+		// 添加监听事件:向前切换图片
 		leftButton01.addActionListener(new ActionListener() {
 
 			@Override
@@ -357,7 +342,7 @@ public class FrameConfig extends JFrame {
 		// 创建右按钮
 		rightButton01 = this.createButton(128 + x, 92 + y, Photo.BUTTON_RIGHT,
 				'd');
-		// 添加监听事件
+		// 添加监听事件：向后切换图片
 		rightButton01.addActionListener(new ActionListener() {
 			@Override
 			public void actionPerformed(ActionEvent arg0) {
@@ -376,7 +361,7 @@ public class FrameConfig extends JFrame {
 
 			@Override
 			public void actionPerformed(ActionEvent arg0) {
-				if ((chooses[0] != selected[1])) {
+				if ((chooses[0] != selected[1])) {		//与玩家一的角色图片重复
 					// 设置不能点击
 					leftButton01.setEnabled(false);
 					rightButton01.setEnabled(false);
@@ -488,7 +473,6 @@ public class FrameConfig extends JFrame {
 					jbnPlayerName02.setEnabled(false);
 
 				}
-
 			}
 		});
 		jp.add(jbnPlayerNameLabel02);
