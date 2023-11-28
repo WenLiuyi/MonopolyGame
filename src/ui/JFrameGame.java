@@ -16,13 +16,13 @@ public class JFrameGame extends JFrame {
 	
 	public JFrameGame() {
 		// 设置名字
-		this.setTitle("迷你大富翁-Java版");
+		this.setTitle("MonopolyGame");
 		// 设置默认关闭属性（程序结束）
 		this.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
 		// 设置窗口大小
-		this.setSize(750 + 200, 650);
+		this.setSize(1200, 800);
 		// 不允许用户改变窗口大小
-		this.setResizable(false);
+		this.setResizable(true);
 		// 居中
 		FrameUtil.setFrameCenter(this);
 		// 设置默认Panel
