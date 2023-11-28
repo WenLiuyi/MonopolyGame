@@ -44,7 +44,7 @@ public class GameShop implements MouseListener, MouseMotionListener {
 	private void createWindow() {
 		frame = new JFrame();
 		panel = new JPanel();
-		JLabel label = new JLabel("≤‚ ‘");
+		JLabel label = new JLabel("Test");
 		panel.add(label);
 
 		frame.add(new Background(0, 0, 0, 0, null,null));

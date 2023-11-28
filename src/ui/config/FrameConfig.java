@@ -113,7 +113,7 @@ public class FrameConfig extends JFrame {
 		// 添加按钮面板
 		this.add(this.createButtonPanel(), BorderLayout.SOUTH);
 		this.setResizable(false);
-		this.setSize(380, 370);
+		this.setSize(1200, 800);
 		// 居中对齐
 		FrameUtil.setFrameCenter(this);
 		setVisible(true);
