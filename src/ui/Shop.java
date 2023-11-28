@@ -26,46 +26,24 @@ import model.buildings.Shop_;
 import model.card.Card;
 
 public class Shop extends JPanel {
-	/**
-	 * 
-	 * 半透明背景覆盖图 黑色
-	 * 
-	 */
+	//半透明背景覆盖图 黑色
 	private Image BG_BRACK = new ImageIcon("images/shop/bg_brack.png")
 			.getImage();
 
-	/**
-	 * 
-	 * 商店背景
-	 * 
-	 */
+	//商店背景
 	private Image bg = new ImageIcon("images/shop/bg_ui.png").getImage();
 
-	/**
-	 * 
-	 * 商店 卡片介绍背景
-	 * 
-	 */
+	//商店 卡片介绍背景
 	private Image detialBg = new ImageIcon("images/shop/item_bg.png")
 			.getImage();
 
-	/**
-	 * 
-	 * 商店 卡片介绍背景
-	 * 
-	 */
+	//商店 卡片介绍背景
 	private Image sideBarBg = new ImageIcon("images/shop/sidebar.png")
 			.getImage();
 
-	/**
-	 * 窗体所在点
-	 */
+	//窗体所在点
 	private Point position = new Point(240, 100);
-	/**
-	 * 
-	 * 子窗口位置（相对于窗体）
-	 * 
-	 */
+	//子窗口位置（相对于窗体
 	private Point atWhere = new Point(282, 244);
 
 	private List<ShopButton> card = new ArrayList<ShopButton>();
@@ -76,17 +54,9 @@ public class Shop extends JPanel {
 
 	private Shop_ shop;
 
-	/**
-	 * 
-	 * 是否显示介绍
-	 * 
-	 */
+	//是否显示介绍
 	private boolean showDetial = true;
-	/**
-	 * 
-	 * 指向当前按下的卡片.
-	 * 
-	 */
+	//指向当前按下的卡片.
 	private int chooseCard = -1;
 
 	private JPanelGame panel;
@@ -124,11 +94,7 @@ public class Shop extends JPanel {
 		add(cancel);
 	}
 
-	/**
-	 * 
-	 * 将窗体隐藏
-	 * 
-	 */
+	//将窗体隐藏
 	public void moveToBack() {
 		for (ShopButton a : card) {
 			remove(a);
@@ -138,11 +104,7 @@ public class Shop extends JPanel {
 		this.panel.getLayeredPane().moveToBack(this);
 	}
 
-	/**
-	 * 
-	 * 将窗体显现
-	 * 
-	 */
+	//将窗体显现
 	public void moveToFront() {
 		// 移动到顶层
 		this.panel.getLayeredPane().moveToFront(this);
@@ -156,11 +118,7 @@ public class Shop extends JPanel {
 		return shop;
 	}
 
-	/**
-	 * 
-	 * 获得设置卡片
-	 * 
-	 */
+	//获得设置卡片
 	public void setChooseCard(ShopButton button) {
 		for (int i = 0; i < card.size(); i++) {
 			if (card.get(i).equals(button)) {
@@ -171,13 +129,7 @@ public class Shop extends JPanel {
 		chooseCard = -1;
 	}
 
-	/**
-	 * 
-	 * 
-	 * 初始化卡片显示
-	 * 
-	 * 
-	 */
+	//初始化卡片显示
 	public void addCards(Shop_ shop) {
 		removeAll();
 		inItUIButton();
@@ -228,11 +180,7 @@ public class Shop extends JPanel {
 		updateUI(g);
 	}
 
-	/**
-	 * 
-	 * 绘制sidebar
-	 * 
-	 */
+	//绘制sidebar
 	private void drawSideBar(Graphics g) {
 		Point sideBar = new Point(position.x - 125, position.y + 32);
 		// 背景
@@ -258,11 +206,7 @@ public class Shop extends JPanel {
 		}
 	}
 
-	/**
-	 * 
-	 * 刷新UI组件
-	 * 
-	 */
+	// 刷新UI组件
 	private void updateUI(Graphics g) {
 		// 判断当前是否显示子窗口
 		if (chooseCard >= 0) {
@@ -282,11 +226,7 @@ public class Shop extends JPanel {
 		cancel.update(g);
 	}
 
-	/**
-	 * 
-	 * 画出显示详细介绍UI
-	 * 
-	 */
+	//画出显示详细介绍UI
 	private void drawDetailUI(Graphics g) {
 		g.drawImage(detialBg, position.x + atWhere.x, position.y + atWhere.y,
 				position.x + atWhere.x + detialBg.getWidth(null), position.y
@@ -316,11 +256,7 @@ public class Shop extends JPanel {
 
 	}
 
-	/**
-	 * 
-	 * 监听
-	 * 
-	 */
+	//监听
 	private void addListener() {
 		addMouseListener(new MouseAdapter() {
 			public void mousePressed(MouseEvent e) { // 按下
@@ -349,11 +285,7 @@ public class Shop extends JPanel {
 		});
 	}
 
-	/**
-	 * 
-	 * 绘制商店
-	 * 
-	 */
+	//绘制商店
 	private void drawShop(Graphics g) {
 		g.drawImage(bg, position.x, position.y, position.x + bg.getWidth(null),
 				position.y + bg.getHeight(null), 0, 0, bg.getWidth(null),

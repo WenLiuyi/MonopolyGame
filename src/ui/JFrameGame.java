@@ -7,11 +7,7 @@ import util.FrameUtil;
 @SuppressWarnings("serial")
 public class JFrameGame extends JFrame {
 
-	/**
-	 * 
-	 * 默认主panel
-	 * 
-	 * */
+	//默认主panel
 	private JPanelGame panelGame = null;
 	
 	public JFrameGame() {

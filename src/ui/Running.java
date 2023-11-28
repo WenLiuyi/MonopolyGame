@@ -75,20 +75,12 @@ public class Running extends Layer{
 			}
 		}
 	}
-	/**
-	 * 
-	 * 将窗体隐藏
-	 * 
-	 */
+	//将窗体隐藏
 	public void moveToBack() {
 		this.panel.getLayeredPane().moveToBack(this);
 	}
 
-	/**
-	 * 
-	 * 将窗体显现
-	 * 
-	 */
+	//将窗体显现
 	public void moveToFront() {
 		this.panel.getLayeredPane().moveToFront(this);
 	}

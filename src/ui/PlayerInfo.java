@@ -72,20 +72,12 @@ public class PlayerInfo extends JPanel {
 		setBounds(x, y, w, h);
 	}
 
-	/**
-	 * 
-	 * 将窗体隐藏
-	 * 
-	 */
+	//将窗体隐藏
 	public void moveToBack() {
 		this.panel.getLayeredPane().moveToBack(this);
 	}
 
-	/**
-	 * 
-	 * 将窗体显现
-	 * 
-	 */
+	//将窗体显现
 	public void moveToFront() {
 		this.panel.getLayeredPane().moveToFront(this);
 	}
@@ -105,24 +97,24 @@ public class PlayerInfo extends JPanel {
 		}
 		String str = "";
 		if (GameRunning.day >= GameRunning.GAME_DAY) {
-			str ="达到游戏天数 "+GameRunning.GAME_DAY+" 天.";
+			str ="Reach maximum rounds. "+GameRunning.GAME_DAY+" rounds.";
 		}
 		//最大金钱
 		PlayerModel p1 = players.get(0);
 		PlayerModel p2 = players.get(1);
 		if (GameRunning.MONEY_MAX > 0 && p1.getCash() >= GameRunning.MONEY_MAX) {
-			str ="\"" + p1.getName() +"\" 金钱达到游戏金钱上限.";
+			str ="\"" + p1.getName() +"\" Capital Reaches the upper limit of game.";
 		} else if (GameRunning.MONEY_MAX > 0 && p2.getCash() >= GameRunning.MONEY_MAX) {
-			str ="\"" + p2.getName() +"\" 金钱达到游戏金钱上限.";
+			str ="\"" + p2.getName() +"\" Capital Reaches the upper limit of game.";
 		}
 		// 破产
 		if (p1.getCash() < 0 ){
-			str ="\"" + p1.getName() +"\"破产.";
+			str ="\"" + p1.getName() +"\"bankrupt.";
 		} else if (p2.getCash() < 0 ){
-			str ="\"" + p2.getName() +"\"破产.";
+			str ="\"" + p2.getName() +"\"bankrupt.";
 		}
 		FontMetrics fm = g.getFontMetrics();
-		g.drawString("结束原因："+str, 200 - fm.stringWidth(str)/2, 86);
+		g.drawString("End reason："+str, 200 - fm.stringWidth(str)/2, 86);
 	}
 
 	private void drawPlayer(Graphics g, PlayerModel player,int y) {

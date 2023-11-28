@@ -16,16 +16,9 @@ import model.BackgroundModel;
  * 
  */
 public class Background extends Layer {
-
-	/**
-	 * 背景图片
-	 */
+	//背景图片
 	private Image bg = null;
-	/**
-	 * 
-	 * 背景模型
-	 * 
-	 */
+	//背景模型
 	private BackgroundModel background = null;
 	private JPanelGame panel;
 
@@ -40,29 +33,17 @@ public class Background extends Layer {
 		// 绘制背景
 		this.paintBg(g);
 	}
-	/**
-	 * 
-	 * 将窗体隐藏
-	 * 
-	 */
+	//将窗体隐藏
 	public void moveToBack() {
 		this.panel.getLayeredPane().moveToBack(this);
 	}
 
-	/**
-	 * 
-	 * 将窗体显现
-	 * 
-	 */
+	//将窗体显现
 	public void moveToFront() {
 		this.panel.getLayeredPane().moveToFront(this);
 	}
 	
-	/**
-	 * 
-	 * 背景绘制方法
-	 * 
-	 */
+	//背景绘制方法
 	public void paintBg(Graphics g){
 		g.drawImage(this.bg, 0, 0, this.bg.getWidth(null),
 				this.bg.getHeight(null), 0, 0, this.bg.getWidth(null),

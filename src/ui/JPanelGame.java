@@ -39,13 +39,9 @@ public class JPanelGame extends JPanel{
 
 	private Control control = null;
 
-	/**
-	 * 全局左上角X
-	 */
+	//全局左上角X
 	public int posX = 100;
-	/**
-	 * 全局左上角Y
-	 * */
+	//全局左上角Y
 	public int posY = 100;
 
 	public JPanelGame() {
@@ -54,11 +50,7 @@ public class JPanelGame extends JPanel{
 		initGame();
 	}
 
-	/**
-	 * 
-	 * 初始化游戏
-	 * 
-	 */
+	//初始化游戏
 	private void initGame() {
 		// 添加控制器
 		control = new Control();
@@ -72,11 +64,7 @@ public class JPanelGame extends JPanel{
 		return control;
 	}
 
-	/**
-	 * 
-	 * 初始化UI
-	 * 
-	 */
+	//初始化UI
 	private void initUI() {
 		// 创建背景UI
 		this.backgroundUI = new Background(0, 0, 950, 650,
@@ -201,11 +189,7 @@ public class JPanelGame extends JPanel{
 		this.gameFrame = gameFrame;
 	}
 
-	/**
-	 * 
-	 * 初始化游戏配置
-	 * 
-	 */
+	//初始化游戏配置
 	public void startGamePanelInit() {
 		for (Layer temp : this.lays) {
 			// 刷新窗口UI

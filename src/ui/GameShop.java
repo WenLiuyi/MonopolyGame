@@ -14,22 +14,14 @@ import model.PlayerModel;
 
 public class GameShop implements MouseListener, MouseMotionListener {
 
-	/**
-	 * 游戏主窗口
-	 */
+	//游戏主窗口
 	private JFrameGame mainFrame;
 
-	/**
-	 * 进入商店的玩家对象
-	 */
+	//进入商店的玩家对象
 	private PlayerModel player;
 	private JFrame frame;
 	private JPanel panel;
-	/**
-	 * 
-	 * 全局的位置变量，用于表示鼠标在窗口上的位置
-	 * 
-	 */
+	//全局的位置变量，用于表示鼠标在窗口上的位置
 	static Point origin = new Point();
 
 	public GameShop(JFrameGame mainFrame, PlayerModel player) {

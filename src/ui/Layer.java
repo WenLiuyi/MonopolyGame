@@ -16,21 +16,13 @@ import util.FileUtil;
  * 
  */
 public abstract class Layer extends JPanel{
-	/**
-	 * 窗口左上角x坐标
-	 */
+	//窗口左上角x坐标
 	protected int x;
-	/**
-	 * 窗口左上角y坐标
-	 */
+	//窗口左上角y坐标
 	protected int y;
-	/**
-	 * 窗口宽度
-	 */
+	//窗口宽度
 	protected int w;
-	/**
-	 * 窗口高度
-	 */
+	//窗口高度
 	protected int h;
 
 	protected static final int PADDING = 5;
@@ -68,11 +60,7 @@ public abstract class Layer extends JPanel{
 		return h;
 	}
 
-	/**
-	 * 
-	 *  边框绘制
-	 * 
-	 */
+	//边框绘制
 	public void createWindow(Graphics g) {
 		g.drawImage(WINDOW_IMG, 0, 0, 0 + SIZE, 0 + SIZE, 0, 0, SIZE, SIZE,
 				null);// 左上固定
@@ -95,8 +83,6 @@ public abstract class Layer extends JPanel{
 	}
 	
 	abstract public void paint(Graphics g);
-	/**
-	 * 开始游戏panel设置
-	 */
+	//开始游戏panel设置
 	abstract public void startPanel();
 }

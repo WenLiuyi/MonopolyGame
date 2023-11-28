@@ -13,22 +13,15 @@ import control.Control;
 
 
 public class ShopButton extends JPanel implements MouseListener {
-	
 	private Shop shopUI;
-	
 	private Image[] img;
-	
 	private Image normalImage;
 	private Image rolloverImage;
 	private Image pressedImage;
 	private Image disabledImage;
-	
 	private Image currentImage;
-
 	private boolean enabled = true;
-	
 	private String name = null;
-
 	private Control control;
 	
 	public ShopButton(Shop shopUI,String name, int x, int y,Control control) {
@@ -91,12 +84,10 @@ public class ShopButton extends JPanel implements MouseListener {
 	public void mouseReleased(MouseEvent e) {
 			currentImage = rolloverImage;
 	}
-
 	@Override
 	public void mouseEntered(MouseEvent e) {
 			currentImage = rolloverImage;
 	}
-
 	@Override
 	public void mouseExited(MouseEvent e) {
 			currentImage = normalImage;

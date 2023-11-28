@@ -50,11 +50,7 @@ public class TextTip extends Layer {
 		paintTextTip(g, this);
 	}
 
-	/**
-	 * 
-	 * 绘制信息面板
-	 * 
-	 */
+	//绘制信息面板
 	private void paintTextTip(Graphics g, TextTip textTip2) {
 		if (textTip.getStartTick() < textTip.getNowTick()
 				&& textTip.getNextTick() >= textTip.getNowTick()) {
@@ -69,11 +65,7 @@ public class TextTip extends Layer {
 
 	}
 
-	/**
-	 * 
-	 * 绘制文字
-	 * 
-	 */
+	//绘制文字
 	private void drawSting(Graphics g) {
 		FontMetrics fm = g.getFontMetrics();
 		String str = this.textTip.getTipString();

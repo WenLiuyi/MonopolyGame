@@ -16,13 +16,9 @@ import model.LandModel;
  */
 public class Lands extends Layer {
 
-	/**
-	 *	土地模型 
-	 */
+	//土地模型
 	private LandModel land = null;
-	/**
-	 * 土地图片
-	 */
+	//土地图片
 	private  Image landsIMG = null;
 	
 	protected Lands(int x, int y, int w, int h,LandModel land) {
@@ -36,11 +32,7 @@ public class Lands extends Layer {
 		this.paintLands(g);
 	}
 	
-	/**
-	 * 
-	 * 土地绘制
-	 * 
-	 */
+	//土地绘制
 	private void paintLands(Graphics g) {
 		int x = 0;
 		int y = 0;
