@@ -13,11 +13,7 @@ import model.EffectModel;
 public class Effect extends Layer {
 
 	private EffectModel effect = null;
-	/**
-	 * 
-	 * panel中点
-	 * 
-	 */
+	//panel中点
 	private Point middle = new Point((x + w) / 2, (y + h) / 2);
 	private JPanelGame panel;
 	protected Effect(int x, int y, int w, int h, EffectModel effect,JPanelGame panel) {
@@ -26,20 +22,12 @@ public class Effect extends Layer {
 		this.panel = panel;
 	}
 
-	/**
-	 * 
-	 * 将窗体隐藏
-	 * 
-	 */
+	//将窗体隐藏
 	public void moveToBack() {
 		this.panel.getLayeredPane().moveToBack(this);
 	}
 
-	/**
-	 * 
-	 * 将窗体显现
-	 * 
-	 */
+	//将窗体显现
 	public void moveToFront() {
 		this.panel.getLayeredPane().moveToFront(this);
 	}

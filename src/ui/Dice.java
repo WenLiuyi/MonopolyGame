@@ -46,11 +46,7 @@ public class Dice extends Layer {
 		diceButton.update(g);
 	}
 
-	/**
-	 * 
-	 * 骰子绘制
-	 * 
-	 */
+	//骰子绘制
 	private void paintDice(Graphics g, int i, int j) {
 		// 设置骰子运动
 		if (dice.getStartTick() < dice.getNowTick()
@@ -74,11 +70,7 @@ public class Dice extends Layer {
 		return diceButton;
 	}
 
-	/**
-	 * 
-	 * 骰子运动状态绘制
-	 * 
-	 */
+	//骰子运动状态绘制
 	public void paintRunning(Graphics g, int x, int y, boolean change) {
 		if (change) {
 			dice.addImgCount(1);
@@ -89,11 +81,7 @@ public class Dice extends Layer {
 				temp.getHeight(null), null);
 	}
 
-	/**
-	 * 
-	 * 骰子产生点数绘制
-	 * 
-	 */
+	//骰子产生点数绘制
 	public void paintPoint(Graphics g, int x, int y) {
 		Image temp = dice.getDicePoints()[dice.getPoint()];
 		g.drawImage(temp, x, y, x + temp.getWidth(null),
@@ -101,11 +89,7 @@ public class Dice extends Layer {
 				temp.getHeight(null), null);
 	}
 
-	/**
-	 * 
-	 * 骰子按钮显示
-	 * 
-	 */
+	//骰子按钮显示
 	private void showDice() {
 		diceButton.setEnabled(dice.isShowDiceLabel());
 	}

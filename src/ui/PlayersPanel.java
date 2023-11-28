@@ -24,11 +24,7 @@ public class PlayersPanel extends Layer {
 		this.players = players;
 	}
 
-	/**
-	 * 
-	 * 玩家信息显示面板绘制
-	 * 
-	 */
+	//玩家信息显示面板绘制
 	public void paintPlayerInformation(Graphics g) {
 		int tempX = 0;
 		tempX += 30;
@@ -39,11 +35,7 @@ public class PlayersPanel extends Layer {
 		}
 	}
 
-	/**
-	 * 
-	 * 玩家信息面板绘制
-	 * 
-	 */
+	//玩家信息面板绘制
 	private void paintPlayerPanel(PlayerModel player, Graphics g, int x,
 			int y) {
 		// 玩家信息字符串

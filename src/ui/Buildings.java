@@ -17,33 +17,15 @@ import model.buildings.Building;
  * 
  */
 public class Buildings extends Layer {
-
-	/**
-	 * 
-	 * 加载房屋信息
-	 * 
-	 */
+	//加载房屋信息
 	private model.BuildingsModel informationBuilding;
-	/**
-	 * 
-	 * 房屋链表
-	 * 
-	 */
+	//房屋链表
 	private List<Building> building;
-	/**
-	 * house 图片 1-5级别
-	 * 
-	 */
+	//house 图片 1-5级别
 	private  Image HOUSE_01 = new ImageIcon("images/building/house01.png").getImage();
-	/**
-	 * house 图片 1-5级别
-	 * 
-	 */
+	//house 图片 1-5级别
 	private  Image HOUSE_02 = new ImageIcon("images/building/house02.png").getImage();
-	/**
-	 * 伪透明图片
-	 * 
-	 */
+	//伪透明图片
 	public  Image TRANSPARENT = new ImageIcon("images/window/transparent.png").getImage();
 	
 	protected Buildings(int x, int y, int w, int h,
@@ -57,11 +39,7 @@ public class Buildings extends Layer {
 		paintBuildings(g);
 	}
 	
-	/**
-	 * 
-	 * 绘制建筑物
-	 * 
-	 */
+	//绘制建筑物
 	private void paintBuildings(Graphics g) {
 		for(Building temp : this.building){
 			// 房屋绘制
