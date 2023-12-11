@@ -182,10 +182,10 @@ public class Shop extends JPanel {
 
 	//绘制sidebar
 	private void drawSideBar(Graphics g) {
-		Point sideBar = new Point(position.x - 125, position.y + 32);
+		Point sideBar = new Point(position.x - 125 - 60, position.y + 32);
 		// 背景
 		g.drawImage(sideBarBg, sideBar.x, sideBar.y,
-				sideBar.x + sideBarBg.getWidth(null),
+				sideBar.x + sideBarBg.getWidth(null) ,
 				sideBar.y + sideBarBg.getHeight(null), 0, 0,
 				sideBarBg.getWidth(null), sideBarBg.getHeight(null), null);
 		// 玩家部分

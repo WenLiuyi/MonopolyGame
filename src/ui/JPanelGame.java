@@ -67,7 +67,7 @@ public class JPanelGame extends JPanel{
 	//初始化UI
 	private void initUI() {
 		// 创建背景UI
-		this.backgroundUI = new Background(0, 0, 950, 650,
+		this.backgroundUI = new Background(200, 0, 800, 800,
 				control.getBackground(),this);
 		// 创建土地UI
 		this.landsUI = new Lands(posX, posY, 950, 650, control.getLand());
@@ -77,12 +77,12 @@ public class JPanelGame extends JPanel{
 		// 创建玩家显示UI
 		this.playersUI = new Players(posX, posY, 950, 650,control.getRunning(), control.getPlayers());
 		// 玩家信息面板UI
-		this.layerPlayersPanel = new PlayersPanel(posX + 64, posY + 66, 170,
+		this.layerPlayersPanel = new PlayersPanel(posX + 64 + 450, posY + 66 - 20, 170,
 				250, control.getPlayers());
 		// 文字显示面板UI
 		this.textTip = new TextTip(0,0,950,650,control.getTextTip());
 		// 骰子事件UI
-		this.dice = new Dice(posX + 64, posY + 320, 170, 90, control);
+		this.dice = new Dice(posX + 64 + 200, posY + 320 - 100, 170, 90, control);
 		// 事件显示UI
 		this.event = new Event(0, 0, 950, 650, control.getEvents());
 		// 商店界面UI

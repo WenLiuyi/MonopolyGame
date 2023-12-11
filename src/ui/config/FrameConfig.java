@@ -280,9 +280,9 @@ public class FrameConfig extends JFrame {
 		jp.setLayout(null);
 		jp.setBackground(new Color(235,236,237));
 		// 增加1P面板
-		addPlayer01Config(12, 0, jp);
+		addPlayer01Config(400, 200, jp);
 		// 增加2P面板
-		addPlayer02Config(212, 0, jp);
+		addPlayer02Config(600, 200, jp);
 		// 增加重置按钮
 		addCancelButton(jp);
 		return jp;
@@ -324,7 +324,7 @@ public class FrameConfig extends JFrame {
 				repaint();
 			}
 		});
-		jbnCancel.setBounds(256 + 7, 235, 80, 30);
+		jbnCancel.setBounds(530, 450, 80, 30);
 		panel.add(jbnCancel);
 	}
 

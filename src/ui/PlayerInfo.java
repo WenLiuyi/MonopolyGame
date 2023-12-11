@@ -20,8 +20,7 @@ import model.PlayerModel;
 /**
  * 
  * 记载一个玩家面板 用于游戏结束时显示
- * 
- * @author HCR
+ *
  * 
  */
 @SuppressWarnings("serial")
