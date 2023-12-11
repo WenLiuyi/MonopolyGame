@@ -391,7 +391,7 @@ public class FrameConfig extends JFrame {
 		jp.add(jlPlayer01Selected);
 		jp.add(jlPlayer01Choose);
 		// 增加名字框
-		jbnPlayerNameLabel01.setBounds(x + 12, y + 128 + 36, 50, 30);
+		jbnPlayerNameLabel01.setBounds(x + 3, y + 128 + 36, 50, 30);
 		jbnPlayerNameField01.setBounds(x + 12 + 30, y + 128 + 36, 120 - 30, 30);
 		jbnPlayerName01.setBounds(x + 12, y + 128 + 36 + 36, 120, 30);
 		// 按钮添加监听
@@ -475,7 +475,7 @@ public class FrameConfig extends JFrame {
 		jp.add(jlPlayer02Selected);
 		jp.add(jlPlayer02Choose);
 		// 增加名字框
-		jbnPlayerNameLabel02.setBounds(x + 12, y + 128 + 36, 50, 30);
+		jbnPlayerNameLabel02.setBounds(x + 3, y + 128 + 36, 50, 30);
 		jbnPlayerNameField02.setBounds(x + 12 + 30, y + 128 + 36, 120 - 30, 30);
 		jbnPlayerName02.setBounds(x + 12, y + 128 + 36 + 36, 120, 30);
 		// 按钮添加监听
@@ -522,13 +522,17 @@ public class FrameConfig extends JFrame {
 			@Override
 			public void actionPerformed(ActionEvent e) {
 				if (selected[0] < 0 || selected[1] < 0) {
-					JOptionPane.showMessageDialog(null, "Please finish choices of characters(no repetition)!");
+					JOptionPane.showMessageDialog(null, "Please finish choices of characters(no repetition)!","Message",2);
+					//JOptionPane.showOptionDialog()
 				} else if (selectedName[0].equals("")
 						|| selectedName[1].equals("")) {
-					JOptionPane.showMessageDialog(null, "Please confirm players' name!");
+					JOptionPane.showMessageDialog(null, "Please confirm players' name!","Message",2);
 				} else {
-					int choose = JOptionPane.showConfirmDialog(null, "Ready to start？");
-					if (choose == JOptionPane.OK_OPTION) {
+					Object[] options = {"Yes","No"};
+					int choose = JOptionPane.showOptionDialog(null, "Ready to start？", "Message",
+							JOptionPane.YES_NO_OPTION,JOptionPane.QUESTION_MESSAGE,null,options,options[0]);
+
+					if (choose == JOptionPane.YES_OPTION) {
 						// 开始游戏
 						startGame();
 					}
