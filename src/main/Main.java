@@ -12,7 +12,9 @@ public class Main {
 	static {
 		// …Ë÷√—˘ Ω
 		try {
-			UIManager.setLookAndFeel("com.sun.java.swing.plaf.nimbus.NimbusLookAndFeel");
+			JFrame.setDefaultLookAndFeelDecorated(true);
+			UIManager.setLookAndFeel("com.jtattoo.plaf.mint.MintLookAndFeel");
+			UIManager.put("OptionPane.okButtonText", "OK");
 		} catch (Exception e1) {
 			
 		}
