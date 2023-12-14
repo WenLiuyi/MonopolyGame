@@ -22,7 +22,7 @@ public class Background extends Layer {
 	private BackgroundModel background = null;
 	private JPanelGame panel;
 
-	protected Background(int x, int y, int w, int h,
+	public Background(int x, int y, int w, int h,
 			BackgroundModel background,JPanelGame panel) {
 		super(x, y, w, h);
 		this.background = background;

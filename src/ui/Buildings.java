@@ -56,9 +56,9 @@ public class Buildings extends Layer {
 			Image temp = building.getOwner().getNumber() == 1 ? this.HOUSE_01
 					: this.HOUSE_02;
 			if (level > 0) {
-				g.drawImage(temp, x + j * 60,
-						y + i * 60 - (temp.getHeight(null) - 60), x + (j + 1)
-								* 60, y + (i + 1) * 60, 60 * (level - 1), 0,
+				g.drawImage(temp, x + j * 60+120,
+						y + i * 60 - (temp.getHeight(null) - 60)-90, x + (j + 1)
+								* 60+120, y + (i + 1) * 60-90, 60 * (level - 1), 0,
 						60 * level, temp.getHeight(null), null);
 			}
 			// Í¸Ã÷¸²¸Ç°×Ìõ

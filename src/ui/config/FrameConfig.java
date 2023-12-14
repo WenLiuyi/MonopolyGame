@@ -28,11 +28,15 @@ import javax.swing.event.ListSelectionEvent;
 import javax.swing.event.ListSelectionListener;
 
 import model.PlayerModel;
+import ui.Background;
 import ui.JFrameGame;
+import ui.JPanelGame;
 import ui.WaitFrame;
 import util.FrameUtil;
 import control.Control;
 import control.GameRunning;
+
+
 
 /**
  * 
@@ -93,6 +97,12 @@ public class FrameConfig extends JFrame {
 	 * 1P 2P已填名字
 	 */
 	private String[] selectedName = { "", "" };
+	private Background backgroundUI = null;
+	private Control control = null;
+	public Control getControl() {
+		return control;
+	}
+
 
 	/**
 	 * 
@@ -106,6 +116,7 @@ public class FrameConfig extends JFrame {
 		this.jFrameGame = jFrameGame;
 		setTitle("User Settings");
 		this.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
+
 		// 设置布局管理器为边界布局
 		this.setLayout(new BorderLayout());
 		// 添加主面板
@@ -131,6 +142,9 @@ public class FrameConfig extends JFrame {
 		this.tabs.setToolTipTextAt(1, "Map settings");
 		this.tabs.add("Conditions", this.createGameSelectPanel());
 		this.tabs.setToolTipTextAt(2, "Conditions settings");
+
+
+
 		return tabs;
 	}
 
@@ -392,7 +406,7 @@ public class FrameConfig extends JFrame {
 		jp.add(jlPlayer01Choose);
 		// 增加名字框
 		jbnPlayerNameLabel01.setBounds(x + 12, y + 128 + 36, 50, 30);
-		jbnPlayerNameField01.setBounds(x + 12 + 30, y + 128 + 36, 120 - 30, 30);
+		jbnPlayerNameField01.setBounds(x + 12 + 30 + 5, y + 128 + 36, 120 - 30 - 5, 30);
 		jbnPlayerName01.setBounds(x + 12, y + 128 + 36 + 36, 120, 30);
 		// 按钮添加监听
 		jbnPlayerName01.addActionListener(new ActionListener() {
@@ -476,7 +490,7 @@ public class FrameConfig extends JFrame {
 		jp.add(jlPlayer02Choose);
 		// 增加名字框
 		jbnPlayerNameLabel02.setBounds(x + 12, y + 128 + 36, 50, 30);
-		jbnPlayerNameField02.setBounds(x + 12 + 30, y + 128 + 36, 120 - 30, 30);
+		jbnPlayerNameField02.setBounds(x + 12 + 30 + 5, y + 128 + 36, 120 - 30 - 5, 30);
 		jbnPlayerName02.setBounds(x + 12, y + 128 + 36 + 36, 120, 30);
 		// 按钮添加监听
 		jbnPlayerName02.addActionListener(new ActionListener() {

@@ -39,10 +39,10 @@ public class PlayersPanel extends Layer {
 			int y) {
 		// 玩家信息字符串
 		String[] information = { player.getName(),
-				Integer.toString(player.getCash()) + " 金币",
-				Integer.toString(player.getNx()) + " 点卷",
-				Integer.toString(player.getBuildings().size()) + " 房屋",
-				Integer.toString(player.getCards().size()) + "卡片" };
+				Integer.toString(player.getCash()) + " coins",
+				Integer.toString(player.getNx()) + " tickets",
+				Integer.toString(player.getBuildings().size()) + " houses",
+				Integer.toString(player.getCards().size()) + "cards" };
 		// 头像(y += 60) + 20
 		g.drawImage(player.getIMG("mini_02"), x -26 + 15 , y - 10, x -26 + 15 +player.getIMG("mini_02").getWidth(null) ,
 				 y - 10 +player

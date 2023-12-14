@@ -70,27 +70,27 @@ public class JPanelGame extends JPanel{
 		this.backgroundUI = new Background(200, 0, 800, 800,
 				control.getBackground(),this);
 		// 创建土地UI
-		this.landsUI = new Lands(posX, posY, 950, 650, control.getLand());
+		this.landsUI = new Lands(posX, posY, 950, 1000, control.getLand());
 		// 创建房屋UI
-		this.buildingsUI = new Buildings(posX, posY, 950, 650,
+		this.buildingsUI = new Buildings(posX, posY, 950, 1000,
 				control.getBuilding());
 		// 创建玩家显示UI
-		this.playersUI = new Players(posX, posY, 950, 650,control.getRunning(), control.getPlayers());
+		this.playersUI = new Players(posX + 120, posY - 90, 950, 650,control.getRunning(), control.getPlayers());
 		// 玩家信息面板UI
 		this.layerPlayersPanel = new PlayersPanel(posX + 64 + 450, posY + 66 - 20, 170,
 				250, control.getPlayers());
 		// 文字显示面板UI
 		this.textTip = new TextTip(0,0,950,650,control.getTextTip());
 		// 骰子事件UI
-		this.dice = new Dice(posX + 64 + 200, posY + 320 - 100, 170, 90, control);
+		this.dice = new Dice(posX + 64 + 200, posY + 320 + 100, 170, 90, control);
 		// 事件显示UI
-		this.event = new Event(0, 0, 950, 650, control.getEvents());
+		this.event = new Event(0, -100, 950, 1000, control.getEvents());
 		// 商店界面UI
 		this.shop = new Shop(0, 0, 750, 650, control, this);
 		// 游戏运转界面UI
-		this.running = new Running(780, 0, 200, 80, control.getRunning(),this);
+		this.running = new Running(780, 0, 200, 200, control.getRunning(),this);
 		// 场景效果UI
-		this.effect = new Effect(0, 0, 950, 650, control.getEffect(),this);
+		this.effect = new Effect(0, 0, 950, 1000, control.getEffect(),this);
 		// 玩家信息面板显示
 		this.playerInfo = new PlayerInfo(control.getPlayers(),this);
 		// 对话UI

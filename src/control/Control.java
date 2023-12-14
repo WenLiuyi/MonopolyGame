@@ -277,7 +277,7 @@ public class Control {
 	 */
 	public void movePlayer() {
 		// 人物运动
-		for (int i = 0; i < (60 / this.run.getNowPlayer().getLastTime()); i++) {
+		for (int i = 0; i < (70 / this.run.getNowPlayer().getLastTime()); i++) {
 			// 移动玩家
 			if (GameRunning.MAP == 1){
 				this.move01();
@@ -393,41 +393,58 @@ public class Control {
 	 * 
 	 */
 	private void move01() {
-		int dice = this.run.getPoint() + 1;
-		PlayerModel p = this.run.getNowPlayer();
-		// 单位移动像素
-		int movePixel = 1;
-		Boolean turn = dice % 2 != 0;
-		if (p.getX() < 9 * 60 && p.getY() == 0) {
-			// 上面
-			if (p.getX() == 4 * 60 && turn) {
-				// 分岔点情况
-				p.setY(p.getY() + movePixel);
-			} else {
-				p.setX(p.getX() + movePixel);
-			}
-		} else if (p.getX() == 9 * 60 && p.getY() >= 0 && p.getY() < 60) {
-			// [0,9]
-			// ↓
-			p.setY(p.getY() + movePixel);
-		} else if (p.getX() >= 8 * 60 && p.getX() < 12 * 60
-				&& p.getY() >= 1 * 60 && p.getY() <= 60 * 1.5) {
-			// →
+		PlayerModel p =this.run.getNowPlayer();
+		int movePixel=1;
+
+		// 根据当前位置确定移动方向
+		if (p.getX() < 7 * 60 && p.getY() == 0) {//上边为8格
+			// 向右移动，到达正方形右上角
 			p.setX(p.getX() + movePixel);
-		} else if (p.getX() == 12 * 60 && p.getY() >= 1 * 60
-				&& p.getY() < 7 * 60) {
-			// ↓
+		} else if (p.getX() == 7 * 60 && p.getY() < 7 * 60) {//右边为8格
+			// 向下移动，到达正方形右下角
 			p.setY(p.getY() + movePixel);
 		} else if (p.getX() > 0 && p.getY() == 7 * 60) {
-			// ←
+			// 向左移动，到达正方形左下角
 			p.setX(p.getX() - movePixel);
 		} else if (p.getX() == 0 && p.getY() > 0) {
-			// ↑
+			// 向上移动，回到正方形左上角
 			p.setY(p.getY() - movePixel);
-		} else if (p.getX() == 4 * 60 && p.getY() > 0 && p.getY() < 7 * 60) {
-			// ↓
-			p.setY(p.getY() + movePixel);
 		}
+//		int dice = this.run.getPoint() + 1;
+//		PlayerModel p = this.run.getNowPlayer();
+//		// 单位移动像素
+//		int movePixel = 1;
+//		Boolean turn = dice % 2 != 0;
+//		if (p.getX() < 9 * 60 && p.getY() == 0) {
+//			// 上面
+//			if (p.getX() == 4 * 60 && turn) {
+//				// 分岔点情况
+//				p.setY(p.getY() + movePixel);
+//			} else {
+//				p.setX(p.getX() + movePixel);
+//			}
+//		} else if (p.getX() == 9 * 60 && p.getY() >= 0 && p.getY() < 60) {
+//			// [0,9]
+//			// ↓
+//			p.setY(p.getY() + movePixel);
+//		} else if (p.getX() >= 8 * 60 && p.getX() < 12 * 60
+//				&& p.getY() >= 1 * 60 && p.getY() <= 60 * 1.5) {
+//			// →
+//			p.setX(p.getX() + movePixel);
+//		} else if (p.getX() == 12 * 60 && p.getY() >= 1 * 60
+//				&& p.getY() < 7 * 60) {
+//			// ↓
+//			p.setY(p.getY() + movePixel);
+//		} else if (p.getX() > 0 && p.getY() == 7 * 60) {
+//			// ←
+//			p.setX(p.getX() - movePixel);
+//		} else if (p.getX() == 0 && p.getY() > 0) {
+//			// ↑
+//			p.setY(p.getY() - movePixel);
+//		} else if (p.getX() == 4 * 60 && p.getY() > 0 && p.getY() < 7 * 60) {
+//			// ↓
+//			p.setY(p.getY() + movePixel);
+//		}
 	}
 	/**
 	 * 
