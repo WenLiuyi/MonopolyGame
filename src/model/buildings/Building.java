@@ -63,6 +63,7 @@ public class Building{
 		this.posY = posY;
 	}
 
+
 	public boolean isPurchasability() {
 		return purchasability;
 	}

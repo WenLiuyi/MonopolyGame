@@ -7,6 +7,7 @@ import java.awt.Graphics;
 import java.util.List;
 
 import model.PlayerModel;
+import model.buildings.Building;
 
 /**
  * 
@@ -25,13 +26,10 @@ public class PlayersPanel extends Layer {
 
 	//玩家信息显示面板绘制
 	public void paintPlayerInformation(Graphics g) {
-		int tempX = 0;
-		tempX += 30;
-		for (PlayerModel temp : players) {
-			// 玩家信息面板绘制
-			paintPlayerPanel(temp, g, tempX, 15);
-			tempX += 80;
-		}
+		int tempX = 30;
+		// 玩家信息面板绘制
+		paintPlayerPanel(players.get(0), g, tempX, 15);
+		paintPlayerPanel(players.get(1), g, tempX+1000, 15);
 	}
 
 	//玩家信息面板绘制
@@ -54,9 +52,14 @@ public class PlayersPanel extends Layer {
 		// 信息重绘
 		FontMetrics fm = g.getFontMetrics();
 		for (int k = 0; k < information.length; g.drawString(information[k], x
-				+ (45 - fm.stringWidth(information[k])), y += 30), k++)
-			;
+				+ (45 - fm.stringWidth(information[k])), y += 30), k++);
 
+		List<Building>builds=player.getBuildings();
+		int k=0;
+		for(Building temp:builds){
+			String name=temp.getName();
+			g.drawString(name,x+(45 - fm.stringWidth(name)),y+=30);
+		}
 	}
 
 	@Override
