@@ -298,10 +298,10 @@ public class Control {
 		// 当前玩家
 		PlayerModel player = this.run.getNowPlayer();
 		// 该地点房屋
-		Building building = this.building.getBuilding(player.getY() / 60,
-				player.getX() / 60);
-		if (building != null && player.getX() % 60 == 0
-				&& player.getY() % 60 == 0) {
+		Building building = this.building.getBuilding(player.getY() /70,
+				player.getX() /70);
+		if (building != null && player.getX() %70 == 0
+				&& player.getY() %70 == 0) {
 			// 经过房屋发生事件
 			int event = building.passEvent();
 			// 进入经过房屋事件处理
@@ -348,37 +348,37 @@ public class Control {
 		PlayerModel p = this.run.getNowPlayer();
 		// 单位移动像素
 		int movePixel = 1;
-		if (p.getX() < 12 * 60 && p.getY() == 0) {
+		if (p.getX() < 12 *70 && p.getY() == 0) {
 			p.setX(p.getX() + movePixel);
-		} else if (p.getX() == 12 *60 && p.getY() < 2 * 60){
+		} else if (p.getX() == 12 * 70 && p.getY() < 2 *70){
 			p.setY(p.getY() + movePixel);
-		} else if (p.getX() == 12 * 60 && p.getY() == 2 * 60){
+		} else if (p.getX() == 12 *70 && p.getY() == 2 *70){
 			if ((int)(Math.random() * 2 ) == 0){
 				p.setX(p.getX() - movePixel);
 			} else {
 				p.setY(p.getY() + movePixel);
 			}
-		} else if (p.getX() == 12 * 60 && p.getY() > 2 * 60 && p.getY() < 4 * 60){
+		} else if (p.getX() == 12 *70 && p.getY() > 2 *70 && p.getY() < 4 *70){
 			p.setY(p.getY() + movePixel);
-		} else if (p.getX() > 8 * 60 && p.getX() <= 12 * 60 && p.getY() == 4 * 60){
+		} else if (p.getX() > 8 *70 && p.getX() <= 12 *70 && p.getY() == 4 *70){
 			p.setX(p.getX() - movePixel);
-		} else if (p.getX() == 8 * 60 && p.getY() == 4 * 60){
+		} else if (p.getX() == 8 *70 && p.getY() == 4 *70){
 			if ((int)(Math.random() * 2 ) == 0){
 				p.setX(p.getX() - movePixel);
 			} else {
 				p.setY(p.getY() + movePixel);
 			}
-		} else if (p.getX() > 4 * 60 && p.getX() < 8 * 60 && p.getY() == 4 * 60) {
+		} else if (p.getX() > 4 *70 && p.getX() < 8 *70 && p.getY() == 4 *70) {
 			p.setX(p.getX() - movePixel);
-		} else if (p.getX() == 8 * 60 && p.getY() > 4 * 60 && p.getY() < 7 * 60){
+		} else if (p.getX() == 8 *70 && p.getY() > 4 *70 && p.getY() < 7 *70){
 			p.setY(p.getY() + movePixel);
-		} else if (p.getX() >  4 * 60 && p.getX() <= 8 * 60 && p.getY() == 7 * 60){
+		} else if (p.getX() >  4 *70 && p.getX() <= 8 *70 && p.getY() == 7 *70){
 			p.setX(p.getX() - movePixel);
-		} else if (p.getX() > 4 * 60 && p.getX() < 12 * 60 && p.getY() == 2 * 60){
+		} else if (p.getX() > 4 *70 && p.getX() < 12 *70 && p.getY() == 2 *70){
 			p.setX(p.getX() - movePixel);
-		} else if (p.getX() == 4 * 60 && p.getY() >= 2 * 60 && p.getY() < 7 * 60){
+		} else if (p.getX() == 4 *70 && p.getY() >= 2 *70 && p.getY() < 7 *70){
 			p.setY(p.getY() + movePixel);
-		} else if (p.getX() > 0 && p.getX() <= 4 * 60 && p.getY() == 7 * 60){
+		} else if (p.getX() > 0 && p.getX() <= 4 *70 && p.getY() == 7 *70){
 			p.setX(p.getX() - movePixel);
 		} else if (p.getX() == 0 && p.getY() > 0){
 			p.setY(p.getY() - movePixel);
@@ -397,13 +397,13 @@ public class Control {
 		int movePixel=1;
 
 		// 根据当前位置确定移动方向
-		if (p.getX() < 7 * 60 && p.getY() == 0) {//上边为8格
+		if (p.getX() < 8 * 70 && p.getY() == 0) {//上边为9格
 			// 向右移动，到达正方形右上角
 			p.setX(p.getX() + movePixel);
-		} else if (p.getX() == 7 * 60 && p.getY() < 7 * 60) {//右边为8格
+		} else if (p.getX() == 8 * 70 && p.getY() < 8 * 70) {//右边为9格
 			// 向下移动，到达正方形右下角
 			p.setY(p.getY() + movePixel);
-		} else if (p.getX() > 0 && p.getY() == 7 * 60) {
+		} else if (p.getX() > 0 && p.getY() == 8 * 70) {
 			// 向左移动，到达正方形左下角
 			p.setX(p.getX() - movePixel);
 		} else if (p.getX() == 0 && p.getY() > 0) {
@@ -415,33 +415,33 @@ public class Control {
 //		// 单位移动像素
 //		int movePixel = 1;
 //		Boolean turn = dice % 2 != 0;
-//		if (p.getX() < 9 * 60 && p.getY() == 0) {
+//		if (p.getX() < 9 *70 && p.getY() == 0) {
 //			// 上面
-//			if (p.getX() == 4 * 60 && turn) {
+//			if (p.getX() == 4 *70 && turn) {
 //				// 分岔点情况
 //				p.setY(p.getY() + movePixel);
 //			} else {
 //				p.setX(p.getX() + movePixel);
 //			}
-//		} else if (p.getX() == 9 * 60 && p.getY() >= 0 && p.getY() < 60) {
+//		} else if (p.getX() == 9 *70 && p.getY() >= 0 && p.getY() <70) {
 //			// [0,9]
 //			// ↓
 //			p.setY(p.getY() + movePixel);
-//		} else if (p.getX() >= 8 * 60 && p.getX() < 12 * 60
-//				&& p.getY() >= 1 * 60 && p.getY() <= 60 * 1.5) {
+//		} else if (p.getX() >= 8 *70 && p.getX() < 12 *70
+//				&& p.getY() >= 1 *70 && p.getY() <=70 * 1.5) {
 //			// →
 //			p.setX(p.getX() + movePixel);
-//		} else if (p.getX() == 12 * 60 && p.getY() >= 1 * 60
-//				&& p.getY() < 7 * 60) {
+//		} else if (p.getX() == 12 *70 && p.getY() >= 1 *70
+//				&& p.getY() < 7 *70) {
 //			// ↓
 //			p.setY(p.getY() + movePixel);
-//		} else if (p.getX() > 0 && p.getY() == 7 * 60) {
+//		} else if (p.getX() > 0 && p.getY() == 7 *70) {
 //			// ←
 //			p.setX(p.getX() - movePixel);
 //		} else if (p.getX() == 0 && p.getY() > 0) {
 //			// ↑
 //			p.setY(p.getY() - movePixel);
-//		} else if (p.getX() == 4 * 60 && p.getY() > 0 && p.getY() < 7 * 60) {
+//		} else if (p.getX() == 4 *70 && p.getY() > 0 && p.getY() < 7 *70) {
 //			// ↓
 //			p.setY(p.getY() + movePixel);
 //		}
@@ -457,11 +457,11 @@ public class Control {
 		PlayerModel p = this.run.getNowPlayer();
 		// 单位移动像素
 		int movePixel = 1;
-		if (p.getX() < 12 * 60 && p.getY() == 0) {
+		if (p.getX() < 12 *70 && p.getY() == 0) {
 			p.setX(p.getX() + movePixel);
-		} else if (p.getX() == 12 *60 && p.getY() < 7 * 60){
+		} else if (p.getX() == 12 * 70 && p.getY() < 7 *70){
 			p.setY(p.getY() + movePixel);
-		} else if (p.getX() > 0 && p.getY() == 7 * 60){
+		} else if (p.getX() > 0 && p.getY() == 7 *70){
 			p.setX(p.getX() - movePixel);
 		} else if (p.getX() == 0 && p.getY() > 0){
 			p.setY(p.getY() - movePixel);
@@ -500,8 +500,8 @@ public class Control {
 		// 当前玩家
 		PlayerModel player = this.run.getNowPlayer();
 		// 该地点房屋
-		Building building = this.building.getBuilding(player.getY() / 60,
-				player.getX() / 60);
+		Building building = this.building.getBuilding(player.getY() /70,
+				player.getX() /70);
 		if (building != null) {// 获取房屋
 			int event = building.getEvent();
 			// 触发房屋信息
@@ -628,7 +628,7 @@ public class Control {
 		}
 		// 在事件层显示事件
 		this.events.showImg(((Park) b).getImgageEvents()[random], 3, new Point(
-				320, 160, 0));
+				320, 70, 0));
 		new Thread(new MyThread(run, 3)).start();
 	}
 
@@ -714,7 +714,7 @@ public class Control {
 					player.getOtherPlayer().setCash(player.getOtherPlayer().getCash() - 3000);
 					this.textTip.showTextTip(player, player.getName() + "将一笔\"3000元\"嫁祸给 "+ player.getOtherPlayer().getName()+"。真是人算不如天算啊.", 6);
 					this.events.showImg(((News) b).get3000(), 3, new Point(
-							420, 160, 0));
+							420, 70, 0));
 					new Thread(new MyThread(run, 3)).start();
 					return;
 				}
@@ -724,7 +724,7 @@ public class Control {
 		}
 		// 在事件层显示事件
 		this.events.showImg(((News) b).getImgageEvents()[random], 3, new Point(
-				420, 160, 0));
+				420, 70, 0));
 		new Thread(new MyThread(run, 3)).start();
 	}
 
@@ -1216,7 +1216,7 @@ public class Control {
 	 */
 	private void useReduceLevelCard(Card card) {
 		Building building = this.building.getBuilding(
-				card.getOwner().getY() / 60, card.getOwner().getX() / 60);
+				card.getOwner().getY() /70, card.getOwner().getX() /70);
 		if (building.getOwner() != null
 				&& building.getOwner().equals(card.getOwner().getOtherPlayer())) {// 是对手的房屋
 			if (building.getLevel() > 0) { // 可以降级
@@ -1254,7 +1254,7 @@ public class Control {
 	private void useHaveCard(Card card) {
 		// 该地点房屋
 		Building building = this.building.getBuilding(
-				card.getOwner().getY() / 60, card.getOwner().getX() / 60);
+				card.getOwner().getY() /70, card.getOwner().getX() /70);
 		if (building.getOwner() != null
 				&& building.getOwner().equals(card.getOwner().getOtherPlayer())) {// 是对方的房屋
 			Object[] options = { "确认使用", "重新选择" };
@@ -1324,7 +1324,7 @@ public class Control {
 	 */
 	private void useChangeCard(Card card) {
 		Building building = this.building.getBuilding(
-				card.getOwner().getY() / 60, card.getOwner().getX() / 60);
+				card.getOwner().getY() /70, card.getOwner().getX() /70);
 		if (building.getOwner() != null
 				&& building.getOwner().equals(card.getOwner().getOtherPlayer())) {// 是对手房屋
 			Object[] options = { "确认使用", "重新选择" };
@@ -1403,7 +1403,7 @@ public class Control {
 
 	private void useAddLevelCard(Card card) {
 		Building building = this.building.getBuilding(
-				card.getOwner().getY() / 60, card.getOwner().getX() / 60);
+				card.getOwner().getY() /70, card.getOwner().getX() /70);
 		if (building.getOwner() != null
 				&& building.getOwner().equals(card.getOwner())) {// 是自己的房屋
 			if (building.canUpLevel()) { // 可升级
