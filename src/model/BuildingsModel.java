@@ -55,7 +55,7 @@ public class BuildingsModel extends Tick implements Port{
 				case LandModel.HOSPITAL:// 医院
 					buildings.add(new Hospital(i, j));
 					//设置全图医院点
-					LandModel.hospital = new java.awt.Point(j * 60,i * 60);
+					LandModel.hospital = new java.awt.Point(j * 70,i * 70);
 //					System.out.println(LandModel.hospital );
 					break;
 				case LandModel.LOTTERY:
@@ -85,7 +85,7 @@ public class BuildingsModel extends Tick implements Port{
 				case LandModel.PRISON:// 监狱
 					buildings.add(new Prison(i, j));
 					//设置全图监狱点
-					LandModel.prison = new java.awt.Point(j * 60, i * 60);
+					LandModel.prison = new java.awt.Point(j * 70, i * 70);
 //					System.out.println(LandModel.prison );
 					break;
 				default:
