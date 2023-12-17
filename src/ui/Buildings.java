@@ -64,8 +64,8 @@ public class Buildings extends Layer {
 			g.drawImage(this.TRANSPARENT, x + j * 70, y + i * 70, x + (j + 1)
 					* 70, y + (i + 1) * 70, 0, 0, 70, 70, null);
 			// 土地拥有者名字显示
-			g.drawString("" + building.getOwner().getName(), x + j * 70 + 4, y + i
-					* 70 + 14);
+//			g.drawString("" + building.getOwner().getName(), x + j * 70 + 4, y + i
+//					* 70);
 		}
 	}
 
