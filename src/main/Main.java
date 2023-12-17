@@ -22,6 +22,7 @@ public class Main {
 
 	public static void main(String[] args) {
 		// 建立等待界面
+		
 		WaitFrame wFrame = new WaitFrame();
 		// 建立游戏主窗口
 		JFrameGame frame = new JFrameGame();

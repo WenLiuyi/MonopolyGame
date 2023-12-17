@@ -34,7 +34,7 @@ public class PlayerModel extends Tick implements Port {
 	/**
 	 * 点卷
 	 */
-	private int nx;
+	private int nx=100;
 
 	/**
 	 * 当前坐标 x 人物右下角点X

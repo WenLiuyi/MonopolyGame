@@ -332,8 +332,9 @@ public class Control {
 	 */
 	private void passOrigin(Building b, PlayerModel player) {
 		this.textTip.showTextTip(player, player.getName() + " 路过原点，奖励 "
-				+ ((Origin) b).getPassReward() + "金币.", 3);
+				+ ((Origin) b).getPassReward() + "金币和30点卷", 3);
 		player.setCash(player.getCash() + ((Origin) b).getPassReward());
+		player.setNx(30 + player.getNx());
 	}
 
 	/**
@@ -564,7 +565,9 @@ public class Control {
 	 * 
 	 */
 	private void stopInShop(Building b, PlayerModel player) {
+		//System.out.println("Hello World");
 		if (player.getNx() > 0){
+			//System.out.println("Hello World");
 		// 为商店的货架从新生成商品
 		((Shop_) b).createCards();
 		// 为商店面板更新新的卡片商品
@@ -639,7 +642,7 @@ public class Control {
 	 */
 	private void stopInOrigin(Building b, PlayerModel player) {
 		this.textTip.showTextTip(player, player.getName() + " 在起点停留，奖励 "
-				+ ((Origin) b).getReward() + "金币.", 3);
+				+ ((Origin) b).getReward() + "金币和50点卷", 3);
 		player.setCash(player.getCash() + ((Origin) b).getReward());
 		new Thread(new MyThread(run, 1)).start();
 	}
