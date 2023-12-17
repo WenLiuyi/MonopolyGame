@@ -137,24 +137,24 @@ public class Shop extends JPanel {
 		List<Card> card_temp = shop.getCards();
 		card = new ArrayList<ShopButton>();
 		card.add(new ShopButton(this, card_temp.get(0).getName(),
-				position.x + 38, position.y + 252, control));
+				position.x + 138 - 40, position.y + 252, control));
 		card.add(new ShopButton(this, card_temp.get(1).getName(),
-				position.x + 38, position.y + 252 + 21 * 1, control));
+				position.x + 138 - 40, position.y + 252 + 21 * 1, control));
 		card.add(new ShopButton(this, card_temp.get(2).getName(),
-				position.x + 38, position.y + 252 + 21 * 2, control));
+				position.x + 138 - 40, position.y + 252 + 21 * 2, control));
 		card.add(new ShopButton(this, card_temp.get(3).getName(),
-				position.x + 38, position.y + 252 + 21 * 3, control));
+				position.x + 138 - 40, position.y + 252 + 21 * 3, control));
 		card.add(new ShopButton(this, card_temp.get(4).getName(),
-				position.x + 38, position.y + 252 + 21 * 4, control));
+				position.x + 138- 40, position.y + 252 + 21 * 4, control));
 
 		card.add(new ShopButton(this, card_temp.get(5).getName(),
-				position.x + 151, position.y + 252, control));
+				position.x + 251- 40, position.y + 252, control));
 		card.add(new ShopButton(this, card_temp.get(6).getName(),
-				position.x + 151, position.y + 252 + 21 * 1, control));
+				position.x + 251- 40, position.y + 252 + 21 * 1, control));
 		card.add(new ShopButton(this, card_temp.get(7).getName(),
-				position.x + 151, position.y + 252 + 21 * 2, control));
+				position.x + 251- 40, position.y + 252 + 21 * 2, control));
 		card.add(new ShopButton(this, card_temp.get(8).getName(),
-				position.x + 151, position.y + 252 + 21 * 3, control));
+				position.x + 251- 40, position.y + 252 + 21 * 3, control));
 		for (ShopButton a : card) {
 			add(a);
 		}
@@ -236,7 +236,7 @@ public class Shop extends JPanel {
 		// 当前卡片
 		Card tempCard = this.shop.getCards().get(chooseCard);
 		Image tempIMG = this.createCardImg(tempCard.getName())[4];
-		g.drawImage(tempIMG, position.x + atWhere.x, position.y + atWhere.y
+		g.drawImage(tempIMG, position.x + atWhere.x , position.y + atWhere.y
 				- 30, position.x + atWhere.x + (int) (tempIMG.getWidth(null)),
 				position.y + atWhere.y - 30 + (int) (tempIMG.getHeight(null)),
 				0, 0, tempIMG.getWidth(null), tempIMG.getHeight(null), null);
@@ -288,13 +288,13 @@ public class Shop extends JPanel {
 
 	//绘制商店
 	private void drawShop(Graphics g) {
-		g.drawImage(bg, position.x + 200, position.y, position.x + bg.getWidth(null),
+		g.drawImage(bg, position.x + 100 - 40, position.y, position.x + 100 -40 + bg.getWidth(null),
 				position.y + bg.getHeight(null), 0, 0, bg.getWidth(null),
 				bg.getHeight(null), null);
 		PlayerModel player = control.getRunning().getNowPlayer();
 		FontMetrics fm = g.getFontMetrics();
 		g.drawString(player.getNx() + "",
-				position.x + 151 + 90  - fm.stringWidth(player.getNx() + ""),
+				position.x + 151 + 90 - fm.stringWidth(player.getNx() + ""),
 				position.y + 252 + 21 * 4 + 14);
 		g.drawString("   点卷", position.x + 151, position.y + 252 + 21 * 4 + 14);
 	}

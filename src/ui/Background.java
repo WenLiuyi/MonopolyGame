@@ -6,6 +6,8 @@ import java.awt.Image;
 import util.FileUtil;
 
 import model.BackgroundModel;
+import java.awt.Color;
+
 
 
 /**
@@ -44,9 +46,17 @@ public class Background extends Layer {
 	
 	//背景绘制方法
 	public void paintBg(Graphics g){
-		g.drawImage(this.bg, 0, 0, this.bg.getWidth(null),
-				this.bg.getHeight(null), 0, 0, this.bg.getWidth(null),
-				this.bg.getHeight(null), null);
+		// 绘制背景图像
+		g.drawImage(this.bg, 0, 0, getWidth(), getHeight(), null);
+
+		// 绘制边框
+		int borderWidth = 5; // 你可以根据需要调整边框的宽度
+		g.setColor(new Color(0,0,0)); // 设置边框颜色为黑色
+		g.fillRect(0, 0, getWidth(), borderWidth); // 上边框
+		g.fillRect(0, 0, borderWidth, getHeight()); // 左边框
+		g.fillRect(getWidth() - borderWidth, 0, borderWidth, getHeight()); // 右边框
+		g.fillRect(0, getHeight() - borderWidth, getWidth(), borderWidth); // 下边框
+
 	}
 	
 

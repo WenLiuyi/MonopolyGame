@@ -26,10 +26,10 @@ public class PlayersPanel extends Layer {
 
 	//玩家信息显示面板绘制
 	public void paintPlayerInformation(Graphics g) {
-		int tempX = 40;
+		int tempX = 60;
 		// 玩家信息面板绘制
 		paintPlayerPanel(players.get(0), g, tempX, 30);
-		paintPlayerPanel(players.get(1), g, tempX + 130, 30);
+		paintPlayerPanel(players.get(1), g, tempX + 120, 30);
 	}
 
 	//玩家信息面板绘制

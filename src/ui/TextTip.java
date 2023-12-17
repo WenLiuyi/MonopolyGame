@@ -68,6 +68,7 @@ public class TextTip extends Layer {
 	private void drawSting(Graphics g) {
 		FontMetrics fm = g.getFontMetrics();
 		String str = this.textTip.getTipString();
+
 		int maxSize = 16;
 		int posY = 32;
 		int front = 0;

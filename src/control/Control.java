@@ -113,8 +113,6 @@ public class Control {
 		// 创建新的背景模型
 		this.background = new BackgroundModel();
 		this.models.add(background);
-		this.background2 = new BackgroundModel();
-		this.models.add(background2);
 
 		// 创建新的土地模型
 		this.land = new LandModel();
