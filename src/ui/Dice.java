@@ -36,8 +36,7 @@ public class Dice extends Layer {
 
 	@Override
 	public void paint(Graphics g) {
-		//窗口绘制
-		this.createWindow(g);
+
 		//骰子绘制
 		this.paintDice(g, -12, -15);
 		//骰子按钮显示

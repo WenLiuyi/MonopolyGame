@@ -11,8 +11,7 @@ import util.FileUtil;
 
 /**
  * 绘制层 抽象类
- * 
- * @author HCR
+ *
  * 
  */
 public abstract class Layer extends JPanel{
@@ -35,7 +34,7 @@ public abstract class Layer extends JPanel{
 		this.setBounds(x, y, w, h);
 		this.x = x;
 		this.y = y;
-		this.w = w;
+		this.w = w - 850;
 		this.h = h;
 	}
 	
@@ -81,7 +80,9 @@ public abstract class Layer extends JPanel{
 		g.drawImage(WINDOW_IMG, 0 + w - SIZE, 0 + h - SIZE, 0 + w, 0 + h,
 				WINDOW_W - SIZE, WINDOW_H - SIZE, WINDOW_W, WINDOW_H, null);// 下右
 	}
-	
+
+
+
 	abstract public void paint(Graphics g);
 	//开始游戏panel设置
 	abstract public void startPanel();

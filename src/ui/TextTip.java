@@ -25,8 +25,7 @@ import model.TextTipModel;
 /**
  * 
  * 信息提示框
- * 
- * @author HCR
+ *
  * 
  */
 public class TextTip extends Layer {
@@ -54,8 +53,8 @@ public class TextTip extends Layer {
 	private void paintTextTip(Graphics g, TextTip textTip2) {
 		if (textTip.getStartTick() < textTip.getNowTick()
 				&& textTip.getNextTick() >= textTip.getNowTick()) {
-			this.pointWindow.x = textTip.getPlayer().getX() + 45;
-			this.pointWindow.y =textTip.getPlayer().getY() + 10;
+			this.pointWindow.x = textTip.getPlayer().getX() + 65;
+			this.pointWindow.y =textTip.getPlayer().getY() - 10;
 			g.drawImage(bg, pointWindow.x, pointWindow.y, pointWindow.x + bg.getWidth(null),
 					pointWindow.y + bg.getHeight(null), 0, 0, bg.getWidth(null),
 					bg.getHeight(null), null);
@@ -69,7 +68,7 @@ public class TextTip extends Layer {
 	private void drawSting(Graphics g) {
 		FontMetrics fm = g.getFontMetrics();
 		String str = this.textTip.getTipString();
-		int maxSize = 13;
+		int maxSize = 16;
 		int posY = 32;
 		int front = 0;
 		int rear = maxSize;

@@ -78,7 +78,7 @@ public class LandModel extends Tick implements Port {
 	public static Point prison = new Point(0, 0);
 
 	public LandModel() {
-		this.landsIMG = new ImageIcon("images/window/land.jpg").getImage();
+		this.landsIMG = new ImageIcon("images/window/land.png").getImage();
 	}
 
 	public Image getLandsIMG() {

@@ -39,8 +39,7 @@ import context.GameState;
  * 
  * 游戏总控制器
  * 
- * 
- * @author Administrator
+ *
  * 
  */
 public class Control {
@@ -73,6 +72,7 @@ public class Control {
 	private List<PlayerModel> players = null;
 	private BuildingsModel building = null;
 	private BackgroundModel background = null;
+	private BackgroundModel background2 = null;
 	private LandModel land = null;
 	private TextTipModel textTip = null;
 	private DiceModel dice = null;
@@ -116,6 +116,9 @@ public class Control {
 		// 创建新的背景模型
 		this.background = new BackgroundModel();
 		this.models.add(background);
+		this.background2 = new BackgroundModel();
+		this.models.add(background2);
+
 		// 创建新的土地模型
 		this.land = new LandModel();
 		this.models.add(land);
@@ -202,6 +205,9 @@ public class Control {
 
 	public BackgroundModel getBackground() {
 		return background;
+	}
+	public BackgroundModel getBackground2() {
+		return background2;
 	}
 
 	public LandModel getLand() {
@@ -1494,8 +1500,7 @@ public class Control {
 	 * 
 	 * 游戏结束~
 	 * 
-	 * 
-	 * @param winer
+	 *
 	 */
 	public void gameOver () {
 		this.run.setNowPlayerState(GameRunning.GAME_STOP);

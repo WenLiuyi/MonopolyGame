@@ -1,6 +1,6 @@
 package ui;
 
-import java.awt.BorderLayout;
+import java.awt.*;
 import java.util.ArrayList;
 import java.util.List;
 
@@ -11,6 +11,7 @@ import ui.massage.MassageOk;
 import ui.massage.MassageSimple;
 import ui.massage.MassageYesNo;
 import control.Control;
+
 
 @SuppressWarnings("serial")
 public class JPanelGame extends JPanel{
@@ -66,9 +67,11 @@ public class JPanelGame extends JPanel{
 
 	//初始化UI
 	private void initUI() {
+
 		// 创建背景UI
 		this.backgroundUI = new Background(300, 100, 630, 630,
 				control.getBackground(),this);
+
 		// 创建土地UI
 		this.landsUI = new Lands(posX, posY, 950, 1000, control.getLand());
 		// 创建房屋UI
@@ -78,14 +81,14 @@ public class JPanelGame extends JPanel{
 		//this.playersUI = new Players(posX + 120, posY - 90, 950, 650,control.getRunning(), control.getPlayers());
 		this.playersUI = new Players(posX + 200, posY , 950, 650,control.getRunning(), control.getPlayers());
 		// 玩家信息面板UI
-		this.layerPlayersPanel = new PlayersPanel(posX-60, posY -85, 1100,
+		this.layerPlayersPanel = new PlayersPanel(posX-60, posY -85 + 10, 1100,
 				250, control.getPlayers());
 		// 文字显示面板UI
-		this.textTip = new TextTip(0,0,950,650,control.getTextTip());
+		this.textTip = new TextTip(150,50,950,650,control.getTextTip());
 		// 骰子事件UI
-		this.dice = new Dice(posX + 64 + 200, posY + 320 + 100, 170, 90, control);
+		this.dice = new Dice(posX + 64 + 200 + 50, posY + 320 + 100, 170, 90, control);
 		// 事件显示UI
-		this.event = new Event(0, -100, 950, 1000, control.getEvents());
+		this.event = new Event(100, 100, 950, 1000, control.getEvents());
 		// 商店界面UI
 		this.shop = new Shop(0, 0, 750, 650, control, this);
 		// 游戏运转界面UI
@@ -103,6 +106,7 @@ public class JPanelGame extends JPanel{
 
 		// lays存放所有panel组件
 		lays = new ArrayList<Layer>();
+
 		lays.add(backgroundUI);
 		lays.add(dice);
 		lays.add(playersUI);
@@ -113,6 +117,7 @@ public class JPanelGame extends JPanel{
 		lays.add(backgroundUI);
 		lays.add(running);
 		lays.add(effect);
+
 		// lays.add(shop);
 		// lays.add(massageYesNo);
 

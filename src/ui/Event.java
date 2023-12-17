@@ -7,8 +7,7 @@ import model.EventsModel;
 
 /**
  * ÊÂ¼şÏÔÊ¾UI
- * 
- * @author HCR
+ *
  * 
  */
 public class Event extends Layer {

@@ -124,7 +124,7 @@ public class FrameConfig extends JFrame {
 		// 添加按钮面板
 		this.add(this.createButtonPanel(), BorderLayout.SOUTH);
 		this.setResizable(false);
-		this.setSize(1200, 800);
+		this.setSize(600, 600);
 		// 居中对齐
 		FrameUtil.setFrameCenter(this);
 		setVisible(true);
@@ -155,7 +155,7 @@ public class FrameConfig extends JFrame {
 	 */
 	private Component createGameSelectPanel() {
 		JPanel panel = new JPanel(new GridLayout(0, 1));
-		panel.setBackground(new Color(235,236,237));
+		panel.setBackground(new Color(240,255,255));
 
 		// --------------------------------
 		final JPanel dayPanel = new JPanel();
@@ -250,7 +250,7 @@ public class FrameConfig extends JFrame {
 	private JPanel createMapSelectPanel() {
 		JPanel jp = new JPanel();
 		jp.setLayout(new GridLayout());
-		jp.setBackground(new Color(235,236,237));
+		jp.setBackground(new Color(240,255,255));
 		JPanel lPane = new JPanel(new BorderLayout());
 		String[] maps = { "\"China Map\"", "\"World Map\"", "\"Beijing Map\"" };
 		final ImageIcon[] maps1 = {
@@ -292,11 +292,11 @@ public class FrameConfig extends JFrame {
 	private JPanel createPlayerSelectPanel() {
 		JPanel jp = new JPanel();
 		jp.setLayout(null);
-		jp.setBackground(new Color(235,236,237));
+		jp.setBackground(new Color(240,255,255));
 		// 增加1P面板
-		addPlayer01Config(400, 200, jp);
+		addPlayer01Config(130, 110, jp);
 		// 增加2P面板
-		addPlayer02Config(600, 200, jp);
+		addPlayer02Config(330, 110, jp);
 		// 增加重置按钮
 		addCancelButton(jp);
 		return jp;
@@ -338,7 +338,7 @@ public class FrameConfig extends JFrame {
 				repaint();
 			}
 		});
-		jbnCancel.setBounds(530, 450, 80, 30);
+		jbnCancel.setBounds(260, 360, 80, 30);
 		panel.add(jbnCancel);
 	}
 

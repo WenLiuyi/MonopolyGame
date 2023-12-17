@@ -11,8 +11,7 @@ import model.BackgroundModel;
 /**
  * 
  * ±³¾°¸üÐÂ²ã
- * 
- * @author HCR
+ *
  * 
  */
 public class Background extends Layer {

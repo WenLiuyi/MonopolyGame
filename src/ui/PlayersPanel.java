@@ -26,10 +26,10 @@ public class PlayersPanel extends Layer {
 
 	//玩家信息显示面板绘制
 	public void paintPlayerInformation(Graphics g) {
-		int tempX = 30;
+		int tempX = 40;
 		// 玩家信息面板绘制
-		paintPlayerPanel(players.get(0), g, tempX, 15);
-		paintPlayerPanel(players.get(1), g, tempX+1000, 15);
+		paintPlayerPanel(players.get(0), g, tempX, 30);
+		paintPlayerPanel(players.get(1), g, tempX + 130, 30);
 	}
 
 	//玩家信息面板绘制
@@ -46,9 +46,9 @@ public class PlayersPanel extends Layer {
 				 y - 10 +player
 					.getIMG("mini_02").getHeight(null) , 0, 0, player.getIMG("mini_02").getWidth(null), player
 						.getIMG("mini_02").getHeight(null), null);
-		y += 48;
+		y += 40;
 		g.setColor(Color.DARK_GRAY);
-		g.setFont(new Font(null,0,14));
+		g.setFont(new Font(null,0,16));
 		// 信息重绘
 		FontMetrics fm = g.getFontMetrics();
 		for (int k = 0; k < information.length; g.drawString(information[k], x

@@ -58,14 +58,14 @@ public class PlayerInfo extends JPanel {
 		this.panel = panel;
 		setLayout(null);
 		initBounds();
-		button = new PlayerInfoButton("", 200 - 58, 430);
+		button = new PlayerInfoButton("", 200 - 58 , 430);
 		add(button);
 		addListener();
 	}
 
 	private void initBounds() {
-		this.x = (950 - bg.getWidth(null)) / 2;
-		this.y = (650 - bg.getHeight(null)) / 2;
+		this.x = (950 - bg.getWidth(null) + 150) / 2;
+		this.y = (650 - bg.getHeight(null) + 60) / 2;
 		this.w = bg.getWidth(null);
 		this.h = bg.getHeight(null);
 		setBounds(x, y, w, h);

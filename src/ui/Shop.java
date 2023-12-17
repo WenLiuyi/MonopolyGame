@@ -182,7 +182,7 @@ public class Shop extends JPanel {
 
 	//绘制sidebar
 	private void drawSideBar(Graphics g) {
-		Point sideBar = new Point(position.x - 125 - 60, position.y + 32 + 200);
+		Point sideBar = new Point(position.x - 125 - 20, position.y + 32 + 200);
 		// 背景
 		g.drawImage(sideBarBg, sideBar.x, sideBar.y,
 				sideBar.x + sideBarBg.getWidth(null),
@@ -204,6 +204,7 @@ public class Shop extends JPanel {
 			g.drawString(str, sideBar.x + 10 + 49 - fm.stringWidth(str) / 2,
 					sideBar.y + 125 + 19 * i);
 		}
+		//moveToFront();
 	}
 
 	// 刷新UI组件
@@ -293,36 +294,11 @@ public class Shop extends JPanel {
 		PlayerModel player = control.getRunning().getNowPlayer();
 		FontMetrics fm = g.getFontMetrics();
 		g.drawString(player.getNx() + "",
-				position.x + 151 + 90 - fm.stringWidth(player.getNx() + ""),
+				position.x + 151 + 90  - fm.stringWidth(player.getNx() + ""),
 				position.y + 252 + 21 * 4 + 14);
 		g.drawString("   点卷", position.x + 151, position.y + 252 + 21 * 4 + 14);
 	}
 
-	/**
-	 * 
-	 * 产生一个卡片按钮对应图片
-	 * 
-	 * 
-	 * @param name
-	 * @return <p>
-	 *         0 normal
-	 *         </p>
-	 *         <p>
-	 *         1 mouseOver
-	 *         </p>
-	 *         <p>
-	 *         2 pressed
-	 *         </p>
-	 *         <p>
-	 *         3 disabled
-	 *         </p>
-	 *         <p>
-	 *         4 卡片显示
-	 *         </p>
-	 *         <p>
-	 *         5 卡片解释
-	 *         </p>
-	 */
 	public Image[] createCardImg(String name) {
 		return new Image[] {
 				new ImageIcon("images/shop/card/" + name + "/normal.png")
