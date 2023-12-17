@@ -29,7 +29,6 @@ import model.buildings.Prison;
 import model.buildings.Shop_;
 import model.card.Card;
 import model.card.TortoiseCard;
-import music.Music;
 import ui.JPanelGame;
 import util.FileUtil;
 import util.MyThread;
@@ -78,8 +77,6 @@ public class Control {
 	private DiceModel dice = null;
 	private EventsModel events = null;
 	private EffectModel effect = null;
-
-	private Music music = null;
 	
 	/**
 	 * 
@@ -139,7 +136,7 @@ public class Control {
 		this.models.add(dice);
 		
 		// 创建一个播放器
-		this.music = new Music();
+		//this.music = new Music();
 	}
 
 	/**
@@ -180,7 +177,7 @@ public class Control {
 		// panel 初始化
 		this.panel.startGamePanelInit();
 		// 游戏背景音乐
-		this.startMusic();
+		//this.startMusic();
 		// 游戏开始产生地图效果
 		this.effect.showImg("start");
 	}
@@ -191,9 +188,9 @@ public class Control {
 	 * 游戏背景音乐
 	 * 
 	 */
-	private void startMusic() {
-		music.start();
-	}
+//	private void startMusic() {
+//		music.start();
+//	}
 
 	public List<PlayerModel> getPlayers() {
 		return players;
@@ -338,8 +335,9 @@ public class Control {
 	 */
 	private void passOrigin(Building b, PlayerModel player) {
 		this.textTip.showTextTip(player, player.getName() + " 路过原点，奖励 "
-				+ ((Origin) b).getPassReward() + "金币.", 3);
+				+ ((Origin) b).getPassReward() + "金币和30点卷", 3);
 		player.setCash(player.getCash() + ((Origin) b).getPassReward());
+		player.setNx(30 + player.getNx());
 	}
 
 	/**
@@ -570,7 +568,9 @@ public class Control {
 	 * 
 	 */
 	private void stopInShop(Building b, PlayerModel player) {
+		//System.out.println("Hello World");
 		if (player.getNx() > 0){
+			//System.out.println("Hello World");
 		// 为商店的货架从新生成商品
 		((Shop_) b).createCards();
 		// 为商店面板更新新的卡片商品
@@ -645,7 +645,7 @@ public class Control {
 	 */
 	private void stopInOrigin(Building b, PlayerModel player) {
 		this.textTip.showTextTip(player, player.getName() + " 在起点停留，奖励 "
-				+ ((Origin) b).getReward() + "金币.", 3);
+				+ ((Origin) b).getReward() + "金币和50点卷", 3);
 		player.setCash(player.getCash() + ((Origin) b).getReward());
 		new Thread(new MyThread(run, 1)).start();
 	}
@@ -1508,7 +1508,7 @@ public class Control {
 		this.panel.getRunning().moveToFront();
 		this.panel.getPlayerInfo().moveToFront();
 		this.panel.getEffect().moveToFront();
-		this.music.gameOver();
+		//this.music.gameOver();
 		this.effect.showImg("timeover2");
 		
 	}
