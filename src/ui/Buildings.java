@@ -56,17 +56,16 @@ public class Buildings extends Layer {
 			Image temp = building.getOwner().getNumber() == 1 ? this.HOUSE_01
 					: this.HOUSE_02;
 			if (level > 0) {
-				g.drawImage(temp, x + j * 60+120,
-						y + i * 60 - (temp.getHeight(null) - 60)-90, x + (j + 1)
-								* 60+120, y + (i + 1) * 60-90, 60 * (level - 1), 0,
+				g.drawImage(temp, x + j * 70+120+50+30,y + i * 70 - (temp.getHeight(null) - 70)-90+90,
+						   x + (j + 1)* 70+120+50+27, y + (i + 1) * 70-90+90+5, 60 * (level - 1), 0,
 						60 * level, temp.getHeight(null), null);
 			}
 			// 透明覆盖白条
-			g.drawImage(this.TRANSPARENT, x + j * 60, y + i * 60, x + (j + 1)
-					* 60, y + (i + 1) * 60, 0, 0, 60, 60, null);
+			g.drawImage(this.TRANSPARENT, x + j * 70, y + i * 70, x + (j + 1)
+					* 70, y + (i + 1) * 70, 0, 0, 70, 70, null);
 			// 土地拥有者名字显示
-			g.drawString("" + building.getOwner().getName(), x + j * 60 + 4, y + i
-					* 60 + 14);
+			g.drawString("" + building.getOwner().getName(), x + j * 70 + 4, y + i
+					* 70 + 14);
 		}
 	}
 
