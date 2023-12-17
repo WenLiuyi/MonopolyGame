@@ -232,7 +232,10 @@ public class FrameConfig extends JFrame {
 		JPanel infoPanel = new JPanel();
 		infoPanel.setBorder(BorderFactory.createTitledBorder(""));
 		JLabel info = new JLabel();
-		info.setText("<html>Available to change winning conditions.<strong>(Default:Regard bankrupt as failure.)</strong></html>");
+		info.setText("<html><strong>Game terminated</strong> when any of the following conditions is met:" +
+				"<br>" +"1.current days >= Days(initialized here)"+"<br>"+"2.Any player's cash >= Initial Capital(initialized here)"
+				+"<br>" +"3.Any player's cash < 0."+
+				"</html>");
 		infoPanel.add(info);
 
 		panel.add(dayPanel);
