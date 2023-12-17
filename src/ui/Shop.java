@@ -182,10 +182,10 @@ public class Shop extends JPanel {
 
 	//绘制sidebar
 	private void drawSideBar(Graphics g) {
-		Point sideBar = new Point(position.x - 125 - 60, position.y + 32);
+		Point sideBar = new Point(position.x - 125 - 60, position.y + 32 + 200);
 		// 背景
 		g.drawImage(sideBarBg, sideBar.x, sideBar.y,
-				sideBar.x + sideBarBg.getWidth(null) ,
+				sideBar.x + sideBarBg.getWidth(null),
 				sideBar.y + sideBarBg.getHeight(null), 0, 0,
 				sideBarBg.getWidth(null), sideBarBg.getHeight(null), null);
 		// 玩家部分
@@ -287,7 +287,7 @@ public class Shop extends JPanel {
 
 	//绘制商店
 	private void drawShop(Graphics g) {
-		g.drawImage(bg, position.x, position.y, position.x + bg.getWidth(null),
+		g.drawImage(bg, position.x + 200, position.y, position.x + bg.getWidth(null),
 				position.y + bg.getHeight(null), 0, 0, bg.getWidth(null),
 				bg.getHeight(null), null);
 		PlayerModel player = control.getRunning().getNowPlayer();
