@@ -31,15 +31,6 @@ public class Hospital extends Building {
 	}
 	@Override
 	public int getEvent() {
-		/*
-		this.player = player;
-		int days = (int) (Math.random() * 4) + 2;
-		player.setInHospital(days);
-		int random = (int) (Math.random() * events.length);
-		String text = events[random];
-		player.showTextTip(player.getName() + text + "Õ£¡Ù" + (days - 1) + "ÃÏ.", 3);
-		new Thread(this).start();
-		*/
 		return GameState.HOSPITAL_EVENT;
 	}
 }

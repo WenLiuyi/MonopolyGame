@@ -45,7 +45,7 @@ public class House extends Building {
 	 * 
 	 * 获取房屋总价值
 	 * 
-	 * @return
+	 * @return 
 	 */
 	public int getAllPrice() {
 		int price = 0;

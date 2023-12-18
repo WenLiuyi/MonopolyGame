@@ -44,14 +44,6 @@ public class TortoiseCard extends Card {
 	 */
 	@Override
 	public int cardBuff() {
-		/*
-		// 增加文本提示
-		this.owner.showTextTip(this.owner.getName() + " 受\"乌龟卡\" 作用，只能移动一步.. ", 2);
-		this.owner.getRunning().setPoint(1);
-		if (life < 0) {
-			this.owner.getEffectCards().remove(this);
-		}
-		*/
 		return GameState.CARD_BUFF_TORTOISE;
 	}
 }
