@@ -133,8 +133,6 @@ public class Control {
 		this.dice = new DiceModel(run);
 		this.models.add(dice);
 		
-		// 创建一个播放器
-		//this.music = new Music();
 	}
 
 	/**
@@ -180,15 +178,6 @@ public class Control {
 		this.effect.showImg("start");
 	}
 
-	
-	/**
-	 * 
-	 * 游戏背景音乐
-	 * 
-	 */
-//	private void startMusic() {
-//		music.start();
-//	}
 
 	public List<PlayerModel> getPlayers() {
 		return players;
@@ -282,11 +271,7 @@ public class Control {
 			// 移动玩家
 			if (GameRunning.MAP == 1){
 				this.move01();
-			} else if (GameRunning.MAP == 2){
-				this.move02();
-			} else if (GameRunning.MAP == 3) {
-				this.move03();
-			}
+			} 
 		}
 	}
 
@@ -338,54 +323,6 @@ public class Control {
 		player.setNx(30 + player.getNx());
 	}
 
-	/**
-	 * 
-	 * 
-	 * 玩家移动的方法
-	 * 
-	 * 
-	 */
-	private void move02() {
-		int dice = this.run.getPoint() + 1;
-		PlayerModel p = this.run.getNowPlayer();
-		// 单位移动像素
-		int movePixel = 1;
-		if (p.getX() < 12 *70 && p.getY() == 0) {
-			p.setX(p.getX() + movePixel);
-		} else if (p.getX() == 12 * 70 && p.getY() < 2 *70){
-			p.setY(p.getY() + movePixel);
-		} else if (p.getX() == 12 *70 && p.getY() == 2 *70){
-			if ((int)(Math.random() * 2 ) == 0){
-				p.setX(p.getX() - movePixel);
-			} else {
-				p.setY(p.getY() + movePixel);
-			}
-		} else if (p.getX() == 12 *70 && p.getY() > 2 *70 && p.getY() < 4 *70){
-			p.setY(p.getY() + movePixel);
-		} else if (p.getX() > 8 *70 && p.getX() <= 12 *70 && p.getY() == 4 *70){
-			p.setX(p.getX() - movePixel);
-		} else if (p.getX() == 8 *70 && p.getY() == 4 *70){
-			if ((int)(Math.random() * 2 ) == 0){
-				p.setX(p.getX() - movePixel);
-			} else {
-				p.setY(p.getY() + movePixel);
-			}
-		} else if (p.getX() > 4 *70 && p.getX() < 8 *70 && p.getY() == 4 *70) {
-			p.setX(p.getX() - movePixel);
-		} else if (p.getX() == 8 *70 && p.getY() > 4 *70 && p.getY() < 7 *70){
-			p.setY(p.getY() + movePixel);
-		} else if (p.getX() >  4 *70 && p.getX() <= 8 *70 && p.getY() == 7 *70){
-			p.setX(p.getX() - movePixel);
-		} else if (p.getX() > 4 *70 && p.getX() < 12 *70 && p.getY() == 2 *70){
-			p.setX(p.getX() - movePixel);
-		} else if (p.getX() == 4 *70 && p.getY() >= 2 *70 && p.getY() < 7 *70){
-			p.setY(p.getY() + movePixel);
-		} else if (p.getX() > 0 && p.getX() <= 4 *70 && p.getY() == 7 *70){
-			p.setX(p.getX() - movePixel);
-		} else if (p.getX() == 0 && p.getY() > 0){
-			p.setY(p.getY() - movePixel);
-		}
-	}
 	
 	/**
 	 * 
@@ -412,63 +349,9 @@ public class Control {
 			// 向上移动，回到正方形左上角
 			p.setY(p.getY() - movePixel);
 		}
-//		int dice = this.run.getPoint() + 1;
-//		PlayerModel p = this.run.getNowPlayer();
-//		// 单位移动像素
-//		int movePixel = 1;
-//		Boolean turn = dice % 2 != 0;
-//		if (p.getX() < 9 *70 && p.getY() == 0) {
-//			// 上面
-//			if (p.getX() == 4 *70 && turn) {
-//				// 分岔点情况
-//				p.setY(p.getY() + movePixel);
-//			} else {
-//				p.setX(p.getX() + movePixel);
-//			}
-//		} else if (p.getX() == 9 *70 && p.getY() >= 0 && p.getY() <70) {
-//			// [0,9]
-//			// ↓
-//			p.setY(p.getY() + movePixel);
-//		} else if (p.getX() >= 8 *70 && p.getX() < 12 *70
-//				&& p.getY() >= 1 *70 && p.getY() <=70 * 1.5) {
-//			// →
-//			p.setX(p.getX() + movePixel);
-//		} else if (p.getX() == 12 *70 && p.getY() >= 1 *70
-//				&& p.getY() < 7 *70) {
-//			// ↓
-//			p.setY(p.getY() + movePixel);
-//		} else if (p.getX() > 0 && p.getY() == 7 *70) {
-//			// ←
-//			p.setX(p.getX() - movePixel);
-//		} else if (p.getX() == 0 && p.getY() > 0) {
-//			// ↑
-//			p.setY(p.getY() - movePixel);
-//		} else if (p.getX() == 4 *70 && p.getY() > 0 && p.getY() < 7 *70) {
-//			// ↓
-//			p.setY(p.getY() + movePixel);
-//		}
 	}
-	/**
-	 * 
-	 * 
-	 * 玩家移动的方法
-	 * 
-	 * 
-	 */
-	private void move03() {
-		PlayerModel p = this.run.getNowPlayer();
-		// 单位移动像素
-		int movePixel = 1;
-		if (p.getX() < 12 *70 && p.getY() == 0) {
-			p.setX(p.getX() + movePixel);
-		} else if (p.getX() == 12 * 70 && p.getY() < 7 *70){
-			p.setY(p.getY() + movePixel);
-		} else if (p.getX() > 0 && p.getY() == 7 *70){
-			p.setX(p.getX() - movePixel);
-		} else if (p.getX() == 0 && p.getY() > 0){
-			p.setY(p.getY() - movePixel);
-		}
-	}
+	
+	
 	/**
 	 * 
 	 * 玩家移动完毕，停下判断
@@ -566,15 +449,13 @@ public class Control {
 	 * 
 	 */
 	private void stopInShop(Building b, PlayerModel player) {
-		//System.out.println("Hello World");
 		if (player.getNx() > 0){
-			//System.out.println("Hello World");
-		// 为商店的货架从新生成商品
-		((Shop_) b).createCards();
-		// 为商店面板更新新的卡片商品
-		this.panel.getShop().addCards((Shop_) b);
-		// 將商店面板推送至頂
-		this.panel.getShop().moveToFront();
+			// 为商店的货架从新生成商品
+			((Shop_) b).createCards();
+			// 为商店面板更新新的卡片商品
+			this.panel.getShop().addCards((Shop_) b);
+			// 將商店面板推送至頂
+			this.panel.getShop().moveToFront();
 		} else {
 			this.run.nextState();
 		}
@@ -710,7 +591,6 @@ public class Control {
 			break;
 		case 16:
 			for (int i = 0; i  < player.getCards().size();i++){
-//				System.out.println(player.getCards().get(i).getcName());
 				// 嫁祸卡
 				if (player.getCards().get(i).getName().equals("CrossingCard")){
 					player.getCards().remove(i);
@@ -1196,7 +1076,6 @@ public class Control {
 		} else {
 			PlayerModel srcPlayer = card.getOwner().getOtherPlayer();
 			// 随机选取一张
-//			System.out.println(srcPlayer.getCards().size() + "zhang");
 			Card getCard = srcPlayer.getCards().get((int) (srcPlayer.getCards().size() * Math.random()));
 			// 对手丧失卡片
 			srcPlayer.getCards().remove(getCard);
@@ -1506,7 +1385,6 @@ public class Control {
 		this.panel.getRunning().moveToFront();
 		this.panel.getPlayerInfo().moveToFront();
 		this.panel.getEffect().moveToFront();
-		//this.music.gameOver();
 		this.effect.showImg("timeover2");
 		
 	}

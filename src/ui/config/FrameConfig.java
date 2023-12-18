@@ -223,7 +223,6 @@ public class FrameConfig extends JFrame {
 			public void itemStateChanged(ItemEvent arg0) {
 				String str = cash_[cashChoice.getSelectedIndex()];
 					GameRunning.PLAYER_CASH = Integer.parseInt(str);
-//					System.out.println(GameRunning.PLAYER_CASH);
 				}
 		});
 		cashPanel.add(cash);
