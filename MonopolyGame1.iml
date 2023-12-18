@@ -19,7 +19,7 @@
     <orderEntry type="module-library" exported="">
       <library>
         <CLASSES>
-<<<<<<< HEAD
+
           <root url="jar://$MODULE_DIR$/lib/jmp123.jar!/" />
         </CLASSES>
         <JAVADOC />
