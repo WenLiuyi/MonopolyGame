@@ -13,6 +13,11 @@ import main.Main;
 
 import control.Control;
 
+/**
+ * @className: PlayerInfoButton
+ * @author: wly
+ * @date:  2023/11/17
+ **/
 
 public class PlayerInfoButton extends JPanel implements MouseListener {
 	

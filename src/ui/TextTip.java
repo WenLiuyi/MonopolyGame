@@ -28,6 +28,12 @@ import model.TextTipModel;
  *
  * 
  */
+/**
+ * @className: TextTip
+ * @author: xjy
+ * @date:  2023/12/9
+ **/
+
 public class TextTip extends Layer {
 
 	private TextTipModel textTip = null;

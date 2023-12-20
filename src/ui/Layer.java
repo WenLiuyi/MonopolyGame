@@ -14,6 +14,12 @@ import util.FileUtil;
  *
  * 
  */
+/**
+ * @className: Layer
+ * @author: xjy
+ * @date:  2023/11/20
+ **/
+
 public abstract class Layer extends JPanel{
 	//´°¿Ú×óÉÏ½Çx×ø±ê
 	protected int x;

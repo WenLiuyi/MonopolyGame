@@ -6,14 +6,11 @@ import context.GameState;
 import control.Control;
 
 /**
- * 
- * 乐透
- * 角色到达这里时，可以进行下注游戏，可能输赢奖金.
- * 
- * 
- *
- * 
- */
+ * @className: Lottery
+ * @author: hcr
+ * @date:  2023/12/9
+ **/
+
 public class Lottery extends Building {
 
 	private PlayerModel player;

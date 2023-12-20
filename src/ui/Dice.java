@@ -11,12 +11,11 @@ import model.DiceModel;
 
 
 /**
- * 
- * ÷»×ÓÖÀµã²ã
- * 
- * @author HCR
- * 
- */
+ * @className: Dice
+ * @author: xjy
+ * @date:  2023/12/2
+ **/
+
 @SuppressWarnings("serial")
 public class Dice extends Layer {
 

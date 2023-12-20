@@ -39,10 +39,11 @@ import control.GameRunning;
 
 
 /**
- * 
- * ∂¡»°”√ªß≈‰÷√
- * 
- * */
+ * @className: FrameConfig
+ * @author: hcr
+ * @date:  2023/11/20
+ **/
+
 public class FrameConfig extends JFrame {
 
 	private JButton jbnStart = new JButton("Start");

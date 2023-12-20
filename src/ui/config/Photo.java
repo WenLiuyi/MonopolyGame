@@ -4,10 +4,11 @@ import java.awt.Image;
 
 import javax.swing.ImageIcon;
 /**
- * 
- * 设定界面图片类
- * 
- * */
+ * @className: Photo
+ * @author: hcr
+ * @date:  2023/11/20
+ **/
+
 
 public class Photo {
 	

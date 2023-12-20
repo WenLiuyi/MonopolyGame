@@ -5,12 +5,11 @@ import context.GameState;
 import control.Control;
 
 /**
- * 
- * 起点 玩家通过时奖励金钱
- * 
- *
- * 
- */
+ * @className: Origin
+ * @author: wly
+ * @date:  2023/12/3
+ **/
+
 public class Origin extends Building {
 	/**
 	 * 通过时奖励的金钱

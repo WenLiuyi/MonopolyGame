@@ -10,6 +10,11 @@ import javax.swing.JPanel;
 import control.Control;
 
 import model.DiceModel;
+/**
+ * @className: DiceButton
+ * @author: xjy
+ * @date:  2023/11/25
+ **/
 
 public class DiceButton extends JPanel implements MouseListener {
 	

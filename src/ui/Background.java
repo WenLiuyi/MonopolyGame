@@ -8,14 +8,12 @@ import util.FileUtil;
 import model.BackgroundModel;
 import java.awt.Color;
 
-
-
 /**
- * 
- * ±³¾°¸üÐÂ²ã
- *
- * 
- */
+ * @className: Background
+ * @author: xjy
+ * @date:  2023/12/2
+ **/
+
 public class Background extends Layer {
 	//±³¾°Í¼Æ¬
 	private Image bg = null;

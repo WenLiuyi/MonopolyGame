@@ -7,6 +7,11 @@ import javax.swing.ImageIcon;
 
 import control.GameRunning;
 
+/**
+ * @className: Running
+ * @author: wly
+ * @date:  2023/12/2
+ **/
 
 public class Running extends Layer{
 	

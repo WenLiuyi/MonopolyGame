@@ -41,6 +41,12 @@ import context.GameState;
  *
  * 
  */
+/**
+ * @className: Control
+ * @author: wly
+ * @date:  2023/12/2
+ **/
+
 public class Control {
 	/**
 	 * 
@@ -104,6 +110,7 @@ public class Control {
 	 * 
 	 */
 	private void initClass() {
+
 		// 创建一个新的事件模型
 		this.events = new EventsModel();
 		this.models.add(events);

@@ -1,6 +1,11 @@
 package util;
 
 import control.GameRunning;
+/**
+ * @className: MyThread
+ * @author: wly
+ * @date:  2023/11/28
+ **/
 
 public class MyThread implements Runnable{
 	

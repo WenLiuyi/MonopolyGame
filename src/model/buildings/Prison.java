@@ -10,12 +10,11 @@ import context.GameState;
 import control.Control;
 
 /**
- * 
- * 监狱 玩家到这里可以入狱或者发生其他事件
- * 
- *
- * 
- */
+ * @className: Prison
+ * @author: wly
+ * @date:  2023/12/13
+ **/
+
 public class Prison extends Building {
 
 	private String[] events = { "去监狱看望好友，", "被冤枉入狱，", "被监狱管理员抓去打扫卫生，" };

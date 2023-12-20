@@ -8,11 +8,11 @@ import javax.swing.ImageIcon;
 import control.Control;
 
 /**
- * 
- * 事件信息
- *
- * 
- */
+ * @className: EffectModel
+ * @author: hcr
+ * @date:  2023/12/6
+ **/
+
 public class EffectModel extends Tick implements Port {
 
 	Point loction = new Point(0,0);

@@ -10,6 +10,12 @@ import model.EventsModel;
  *
  * 
  */
+/**
+ * @className: Event
+ * @author: xjy
+ * @date:  2023/11/26
+ **/
+
 public class Event extends Layer {
 
 	private EventsModel events = null;

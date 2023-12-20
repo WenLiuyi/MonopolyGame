@@ -16,12 +16,11 @@ import ui.JPanelGame;
 import util.FileUtil;
 
 /**
- * 
- * В╩вс
- * 
- *
- * 
- */
+ * @className: DiceModel
+ * @author: hrc
+ * @date:  2023/12/5
+ **/
+
 public class DiceModel extends Tick implements Port {
 
 	/**

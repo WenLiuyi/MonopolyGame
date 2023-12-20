@@ -1,13 +1,11 @@
 package context;
 
 /**
- * 
- * 游戏常量
- * 
- * 
- *
- *
- */
+ * @className: GameState
+ * @author: xjy
+ * @date:  2023/12/1
+ **/
+
 public class GameState {
 
 	// 停留在建筑返回状态

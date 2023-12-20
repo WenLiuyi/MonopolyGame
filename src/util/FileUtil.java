@@ -10,10 +10,11 @@ import java.net.URLClassLoader;
 import java.util.HashMap;
 
 /**
- * 该类用于处理项目资源的工具类
- * <p>
- * 要注意的是：项目资源必须要放到工程目录src下，也可以应用项目外部资源需指明绝对路径
- */
+ * @className: FileUtil
+ * @author: wly
+ * @date:  2023/11/24
+ **/
+
 public class FileUtil {
 	//项目文件必须位于src目录下的下列3个子文件夹之一
 	private static final String FILE = "file/";	//存放普通文件

@@ -10,13 +10,12 @@ import util.FileUtil;
 import model.buildings.Point;
 
 import control.Control;
-
 /**
- * 
- * 事件信息
- *
- * 
- */
+ * @className: EventsModel
+ * @author: xjy
+ * @date:  2023/12/3
+ **/
+
 public class EventsModel extends Tick implements Port {
 
 	/**

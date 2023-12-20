@@ -11,6 +11,11 @@ import javax.swing.JPanel;
 
 import control.Control;
 
+/**
+ * @className: ShopButton
+ * @author: xjy
+ * @date:  2023/12/8
+ **/
 
 public class ShopButton extends JPanel implements MouseListener {
 	private Shop shopUI;

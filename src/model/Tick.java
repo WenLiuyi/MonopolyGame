@@ -1,11 +1,11 @@
 package model;
 
 /**
- * 
- * 游戏对象父类
- *
- *
- */
+ * @className: Tick
+ * @author: wly
+ * @date:  2023/11/20
+ **/
+
 public class Tick {
 	/**
 	 * 记载当前的tick值

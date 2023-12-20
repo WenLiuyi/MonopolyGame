@@ -13,10 +13,11 @@ import control.Control;
 import control.GameRunning;
 
 /**
- * Íæ¼ÒÐÅÏ¢
- *
- * 
- */
+ * @className: PlayerModel
+ * @author: wly
+ * @date:  2023/12/6
+ **/
+
 public class PlayerModel extends Tick implements Port {
 
 	/**

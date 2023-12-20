@@ -9,9 +9,13 @@ import javax.swing.ImageIcon;
 import control.GameRunning;
 
 import model.EffectModel;
+/**
+ * @className: Effect
+ * @author: xjy
+ * @date:  2023/11/25
+ **/
 
 public class Effect extends Layer {
-
 	private EffectModel effect = null;
 	//panel÷–µ„
 	private Point middle = new Point((x + w) / 2, (y + h) / 2);
@@ -34,6 +38,14 @@ public class Effect extends Layer {
 	
 	@Override
 	public void paint(Graphics g) {
+		/**
+		 * @title paint
+		 * @author xjy 
+		 * @param: g
+		 * @updateTime 2023/11/20 22:08
+		 * @throws 
+		 */
+
 		if (effect.getStartTick() < effect.getNowTick()
 				&& effect.getNextTick() >= effect.getNowTick()) {
 			int pos = (int) ((effect.getNowTick() - effect.getStartTick()) / effect

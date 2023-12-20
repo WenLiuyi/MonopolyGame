@@ -11,6 +11,11 @@ import javax.swing.JPanel;
 
 import model.PlayerModel;
 
+/**
+ * @className: GameShop
+ * @author: xjy
+ * @date:  2023/11/26
+ **/
 
 public class GameShop implements MouseListener, MouseMotionListener {
 

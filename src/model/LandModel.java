@@ -8,11 +8,11 @@ import javax.swing.ImageIcon;
 import control.GameRunning;
 
 /**
- * อมตุ
- * 
- *
- * 
- */
+ * @className: LandModel
+ * @author: wly
+ * @date:  2023/12/5
+ **/
+
 public class LandModel extends Tick implements Port {
 	/**
 	 * 

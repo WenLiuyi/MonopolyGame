@@ -10,7 +10,12 @@ import control.GameRunning;
 import ui.JPanelGame;
 import util.FileUtil;
 
-//±³¾°¸üÐÂ
+/**
+ * @className: BackgroundModel
+ * @author: hcr
+ * @date:  2023/12/1
+ **/
+
 public class BackgroundModel extends Tick implements Port{
 	//±³¾°Í¼Ïñ
 	private Image bg = null;

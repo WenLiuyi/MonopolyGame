@@ -6,12 +6,11 @@ import context.GameState;
 import control.Control;
 
 /**
- * 
- * 10 30 50 点卷位 角色到达点卷位的时候，可以获得响应 点卷 的金额
- * 
- *
- * 
- */
+ * @className: Point
+ * @author: wly
+ * @date:  2023/12/8
+ **/
+
 public class Point extends Building {
 
 	private int point;

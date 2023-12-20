@@ -24,6 +24,12 @@ import model.PlayerModel;
  * 
  */
 @SuppressWarnings("serial")
+/**
+ * @className: PlayerInfo
+ * @author: xjy
+ * @date:  2023/11/20
+ **/
+
 public class PlayerInfo extends JPanel {
 
 	private Image bg = new ImageIcon("images/end/bg.png").getImage();

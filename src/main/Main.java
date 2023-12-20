@@ -8,6 +8,12 @@ import com.jtattoo.plaf.mint.MintLookAndFeel;
 import ui.JFrameGame;
 import ui.WaitFrame;
 import ui.config.FrameConfig;
+/**
+ * @className: Main
+ * @author: wly
+ * @date:  2023/11/3
+ **/
+
 
 public class Main {
 

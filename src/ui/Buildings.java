@@ -8,14 +8,13 @@ import javax.swing.ImageIcon;
 
 import model.PlayerModel;
 import model.buildings.Building;
-
-
 /**
- * 房屋刷新层
- * 
- * @author HCR
- * 
- */
+ * @className: Buildings
+ * @author: wly
+ * @date:  2023/12/2
+ **/
+
+
 public class Buildings extends Layer {
 	//加载房屋信息
 	private model.BuildingsModel informationBuilding;

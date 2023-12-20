@@ -15,10 +15,11 @@ import model.buildings.Prison;
 import model.buildings.Shop_;
 
 /**
- * 全局房屋信息
- *
- * 
- */
+ * @className: BuildingsModel
+ * @author: hcr
+ * @date:  2023/12/4
+ **/
+
 public class BuildingsModel extends Tick implements Port{
 	/**
 	 * 房屋链表

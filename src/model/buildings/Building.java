@@ -8,11 +8,11 @@ import model.PlayerModel;
 import control.Control;
 
 /**
- * 
- * ·¿Îİ³éÏóÀà
+ * @className: Building
+ * @author: hcr
+ * @date:  2023/12/7
+ **/
 
- * 
- */
 public class Building{
 	/**
 	 * 

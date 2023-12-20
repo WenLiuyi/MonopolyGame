@@ -10,17 +10,13 @@ import context.GameState;
 import control.Control;
 
 /**
- * 
- * 公园 与世无争的公园，角色到这里什么大事也不会发生
- * 
- *
- * 
- */
+ * @className: Park
+ * @author: wly
+ * @date:  2023/12/12
+ **/
+
 public class Park extends Building {
-	/*
-	 * 
-	 * 事件图片
-	 */
+
 	private Image[] imgageEvents = { EVENT_PARK_1, EVENT_PARK_2, EVENT_PARK_3,
 			EVENT_PARK_4 };
 	/**

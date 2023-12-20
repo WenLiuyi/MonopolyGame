@@ -16,13 +16,11 @@ import control.Control;
 import util.FileUtil;
 
 /**
- * 
- * 新闻 考验玩家运气的时候，随机发生的事件会给玩家带来各种意想不到的局面
- * 
- * 
- * @author HCR
- * 
- */
+ * @className: News
+ * @author: hcr
+ * @date:  2023/12/7
+ **/
+
 public class News extends Building {
 	/*
 	 * 
