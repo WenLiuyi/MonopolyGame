@@ -10,9 +10,9 @@ import control.GameRunning;
 
 import model.EffectModel;
 /**
- * @className: Effect
- * @author: xjy
- * @date:  2023/11/25
+ * @className Effect
+ * @author xjy
+ * @date  2023/11/25
  **/
 
 public class Effect extends Layer {

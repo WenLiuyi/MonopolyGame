@@ -6,9 +6,9 @@ import context.GameState;
 import control.Control;
 
 /**
- * @className: Point
- * @author: wly
- * @date:  2023/12/8
+ * @className Point
+ * @author wly
+ * @date  2023/12/8
  **/
 
 public class Point extends Building {

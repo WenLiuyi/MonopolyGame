@@ -13,6 +13,11 @@ import model.PlayerModel;
  * 
  * 
  */
+/**
+ * @className RobCard
+ * @author wly
+ * @date  2023/12/2
+ **/
 public class RobCard extends Card {
 
 	public RobCard(PlayerModel owner) {

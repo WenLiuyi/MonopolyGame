@@ -13,6 +13,11 @@ import model.PlayerModel;
  * 一步卡、六步卡、烏龜卡、停留卡效果會互相覆蓋。
  * 
  */
+/**
+ * @className TortoiseCard
+ * @author wly
+ * @date  2023/12/6
+ **/
 public class TortoiseCard extends Card {
 
 	private int life = 3;

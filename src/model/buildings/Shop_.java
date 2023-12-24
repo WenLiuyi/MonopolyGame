@@ -15,9 +15,9 @@ import model.buildings.Building;
 import model.card.*;
 
 /**
- * @className: Shop_
- * @author: hcr
- * @date:  2023/12/9
+ * @className Shop_
+ * @author hcr
+ * @date  2023/12/9
  **/
 
 public class Shop_ extends Building {

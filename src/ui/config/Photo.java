@@ -4,9 +4,9 @@ import java.awt.Image;
 
 import javax.swing.ImageIcon;
 /**
- * @className: Photo
- * @author: hcr
- * @date:  2023/11/20
+ * @className Photo
+ * @author hcr
+ * @date  2023/11/20
  **/
 
 

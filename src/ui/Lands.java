@@ -16,9 +16,9 @@ import javax.swing.*;
  * 
  */
 /**
- * @className: Lands
- * @author: xjy
- * @date:  2023/11/23
+ * @className Lands
+ * @author xjy
+ * @date  2023/11/23
  **/
 
 public class Lands extends Layer {

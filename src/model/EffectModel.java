@@ -8,9 +8,9 @@ import javax.swing.ImageIcon;
 import control.Control;
 
 /**
- * @className: EffectModel
- * @author: hcr
- * @date:  2023/12/6
+ * @className EffectModel
+ * @author hcr
+ * @date  2023/12/6
  **/
 
 public class EffectModel extends Tick implements Port {

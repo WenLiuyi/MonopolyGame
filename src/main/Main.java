@@ -9,9 +9,9 @@ import ui.JFrameGame;
 import ui.WaitFrame;
 import ui.config.FrameConfig;
 /**
- * @className: Main
- * @author: wly
- * @date:  2023/11/3
+ * @className Main
+ * @author wly
+ * @date  2023/11/3
  **/
 
 

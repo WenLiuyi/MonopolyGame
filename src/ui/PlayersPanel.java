@@ -16,9 +16,9 @@ import model.buildings.Building;
  * 
  */
 /**
- * @className: PlayersPanel
- * @author: wly
- * @date:  2023/12/5
+ * @className PlayersPanel
+ * @author wly
+ * @date  2023/12/5
  **/
 
 public class PlayersPanel extends Layer {

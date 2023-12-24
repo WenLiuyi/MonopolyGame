@@ -15,9 +15,9 @@ import control.Control;
 
 @SuppressWarnings("serial")
 /**
- * @className: JPanelGame
- * @author: wly
- * @date:  2023/11/27
+ * @className JPanelGame
+ * @author wly
+ * @date  2023/11/27
  **/
 
 public class JPanelGame extends JPanel{

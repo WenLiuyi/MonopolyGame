@@ -13,9 +13,9 @@ import control.Control;
 import control.GameRunning;
 
 /**
- * @className: PlayerModel
- * @author: wly
- * @date:  2023/12/6
+ * @className PlayerModel
+ * @author wly
+ * @date  2023/12/6
  **/
 
 public class PlayerModel extends Tick implements Port {
@@ -172,8 +172,7 @@ public class PlayerModel extends Tick implements Port {
 	 * 
 	 * 获取玩家图像
 	 * 
-	 * @return <li>logo LOGO</li> <li>mini 小图标-无边</li> <li>mini_on 小图标-有边</li>
-	 *         <i>h5 图像 </li> <li>other null</li>
+	 * @return Image
 	 */
 	public Image getIMG(String str) {
 		if (str.equals("logo"))

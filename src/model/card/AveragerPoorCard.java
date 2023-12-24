@@ -12,8 +12,17 @@ import model.PlayerModel;
  * OK
  * 
  */
+/**
+ * @className AveragerPoorCard
+ * @author hcr
+ * @date  2023/12/4
+ **/
 public class AveragerPoorCard extends Card {
 
+	/**
+	 *
+	 * @param owner
+	 */
 	public AveragerPoorCard(PlayerModel owner) {
 		super(owner);
 		this.name = "AveragerPoorCard";

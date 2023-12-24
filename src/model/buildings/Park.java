@@ -10,9 +10,9 @@ import context.GameState;
 import control.Control;
 
 /**
- * @className: Park
- * @author: wly
- * @date:  2023/12/12
+ * @className Park
+ * @author wly
+ * @date  2023/12/12
  **/
 
 public class Park extends Building {

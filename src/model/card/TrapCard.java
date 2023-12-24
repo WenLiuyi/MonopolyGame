@@ -12,6 +12,11 @@ import model.PlayerModel;
  * 陷害卡,使用陷害卡後選定一名對手，可以立刻讓對方入獄2天。
  * 
  */
+/**
+ * @className TrapCard
+ * @author hcr
+ * @date  2023/12/7
+ **/
 public class TrapCard extends Card {
 
 	public TrapCard(PlayerModel owner) {

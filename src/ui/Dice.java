@@ -11,9 +11,9 @@ import model.DiceModel;
 
 
 /**
- * @className: Dice
- * @author: xjy
- * @date:  2023/12/2
+ * @className Dice
+ * @author xjy
+ * @date  2023/12/2
  **/
 
 @SuppressWarnings("serial")

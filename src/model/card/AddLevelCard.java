@@ -13,8 +13,18 @@ import model.buildings.Building;
  * OK
  * 
  */
+
+/**
+ * @className AddLevelCard
+ * @author hcr
+ * @date  2023/12/1
+ **/
 public class AddLevelCard extends Card {
 
+	/**
+	 *
+	 * @param owner
+	 */
 	public AddLevelCard(PlayerModel owner) {
 		super(owner);
 		this.name = "AddLevelCard";

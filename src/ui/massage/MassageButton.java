@@ -9,6 +9,11 @@ import java.awt.event.MouseListener;
 import javax.swing.ImageIcon;
 import javax.swing.JPanel;
 
+/**
+ * @className PlayerModel
+ * @author wly
+ * @date  2023/12/6
+ **/
 @SuppressWarnings("serial")
 public class MassageButton extends JPanel implements MouseListener {
 

@@ -9,9 +9,9 @@ import javax.swing.ImageIcon;
 import model.PlayerModel;
 import model.buildings.Building;
 /**
- * @className: Buildings
- * @author: wly
- * @date:  2023/12/2
+ * @className Buildings
+ * @author wly
+ * @date  2023/12/2
  **/
 
 
@@ -24,9 +24,18 @@ public class Buildings extends Layer {
 	private  Image HOUSE_01 = new ImageIcon("images/building/house01.png").getImage();
 	//house Í¼Æ¬ 1-5¼¶±ð
 	private  Image HOUSE_02 = new ImageIcon("images/building/house02.png").getImage();
+
 	//Î±Í¸Ã÷Í¼Æ¬
 	public  Image TRANSPARENT = new ImageIcon("images/window/transparent.png").getImage();
-	
+
+	/**
+	 *
+	 * @param x
+	 * @param y
+	 * @param w
+	 * @param h
+	 * @param informationBuilding
+	 */
 	protected Buildings(int x, int y, int w, int h,
 			model.BuildingsModel informationBuilding) {
 		super(x, y, w, h);

@@ -5,9 +5,9 @@ import java.awt.Toolkit;
 
 import javax.swing.JFrame;
 /**
- * @className: FrameUtil
- * @author: wly
- * @date:  2023/11/26
+ * @className FrameUtil
+ * @author wly
+ * @date  2023/11/26
  **/
 
 public class FrameUtil {

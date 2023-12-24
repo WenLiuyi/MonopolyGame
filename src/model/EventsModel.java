@@ -11,9 +11,9 @@ import model.buildings.Point;
 
 import control.Control;
 /**
- * @className: EventsModel
- * @author: xjy
- * @date:  2023/12/3
+ * @className EventsModel
+ * @author xjy
+ * @date  2023/12/3
  **/
 
 public class EventsModel extends Tick implements Port {

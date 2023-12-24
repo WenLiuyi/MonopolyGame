@@ -5,9 +5,9 @@ import context.GameState;
 import control.Control;
 
 /**
- * @className: Origin
- * @author: wly
- * @date:  2023/12/3
+ * @className Origin
+ * @author wly
+ * @date  2023/12/3
  **/
 
 public class Origin extends Building {

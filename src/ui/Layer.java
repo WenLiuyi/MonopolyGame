@@ -15,9 +15,9 @@ import util.FileUtil;
  * 
  */
 /**
- * @className: Layer
- * @author: xjy
- * @date:  2023/11/20
+ * @className Layer
+ * @author xjy
+ * @date  2023/11/20
  **/
 
 public abstract class Layer extends JPanel{
@@ -87,9 +87,14 @@ public abstract class Layer extends JPanel{
 				WINDOW_W - SIZE, WINDOW_H - SIZE, WINDOW_W, WINDOW_H, null);// 下右
 	}
 
-
+	/**
+	 *
+	 * @param g  the <code>Graphics</code> context in which to paint
+	 */
 
 	abstract public void paint(Graphics g);
-	//开始游戏panel设置
+	/**
+	 * 开始游戏panel设置
+	 */
 	abstract public void startPanel();
 }

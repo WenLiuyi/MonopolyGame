@@ -1,8 +1,13 @@
 package model;
 
+/**
+ * @className TextTipModel
+ * @author wly
+ * @date  2023/12/5
+ **/
 public interface Port {
 	/**
-	 * 
+	 * @param tick
 	 * 模型更新
 	 * 
 	 */

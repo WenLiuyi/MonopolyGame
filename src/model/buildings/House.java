@@ -15,9 +15,9 @@ import util.FileUtil;
 import util.MyThread;
 
 /**
- * @className: House
- * @author: hcr
- * @date:  2023/12/7
+ * @className House
+ * @author hcr
+ * @date  2023/12/7
  **/
 
 public class House extends Building {

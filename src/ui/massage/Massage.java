@@ -14,6 +14,11 @@ import javax.swing.JPanel;
 
 import ui.JPanelGame;
 
+/**
+ * @className PlayerModel
+ * @author wly
+ * @date  2023/12/3
+ **/
 public class Massage extends JPanel {
 
 	protected Image bg = new ImageIcon("images/massage/massage.png").getImage();

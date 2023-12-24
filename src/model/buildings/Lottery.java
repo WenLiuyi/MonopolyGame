@@ -6,9 +6,9 @@ import context.GameState;
 import control.Control;
 
 /**
- * @className: Lottery
- * @author: hcr
- * @date:  2023/12/9
+ * @className Lottery
+ * @author hcr
+ * @date  2023/12/9
  **/
 
 public class Lottery extends Building {

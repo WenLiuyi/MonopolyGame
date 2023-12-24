@@ -13,6 +13,11 @@ import model.PlayerModel;
  * OK
  *
  */
+/**
+ * @className ControlDiceCard
+ * @author wly
+ * @date  2023/11/20
+ **/
 public class ControlDiceCard extends Card{
 
 	int diceNumber;

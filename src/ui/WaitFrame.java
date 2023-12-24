@@ -7,9 +7,9 @@ import javax.swing.JLabel;
 
 import util.FrameUtil;
 /**
- * @className: WaitFrame
- * @author: xjy
- * @date:  2023/12/13
+ * @className WaitFrame
+ * @author xjy
+ * @date  2023/12/13
  **/
 
 public class WaitFrame extends JFrame {

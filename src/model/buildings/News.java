@@ -16,9 +16,9 @@ import control.Control;
 import util.FileUtil;
 
 /**
- * @className: News
- * @author: hcr
- * @date:  2023/12/7
+ * @className News
+ * @author hcr
+ * @date  2023/12/7
  **/
 
 public class News extends Building {

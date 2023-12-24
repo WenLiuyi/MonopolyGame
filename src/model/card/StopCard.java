@@ -16,6 +16,11 @@ import model.PlayerModel;
  * 
  *
  */
+/**
+ * @className StopCard
+ * @author xjy
+ * @date  2023/12/2
+ **/
 public class StopCard extends Card{
 
 	public StopCard(PlayerModel owner) {

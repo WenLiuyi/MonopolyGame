@@ -1,9 +1,9 @@
 package context;
 
 /**
- * @className: GameState
- * @author: xjy
- * @date:  2023/12/1
+ * @className GameState
+ * @author xjy
+ * @date  2023/12/1
  **/
 
 public class GameState {

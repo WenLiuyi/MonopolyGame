@@ -11,9 +11,9 @@ import control.Control;
 
 import model.DiceModel;
 /**
- * @className: DiceButton
- * @author: xjy
- * @date:  2023/11/25
+ * @className DiceButton
+ * @author xjy
+ * @date  2023/11/25
  **/
 
 public class DiceButton extends JPanel implements MouseListener {
@@ -29,6 +29,11 @@ public class DiceButton extends JPanel implements MouseListener {
 
 	private boolean enabled = true;
 
+	/**
+	 * @className DiceButton
+	 * @author xjy
+	 * @date  2023/11/25
+	 **/
 	public DiceButton(Control control, int x, int y) {
 		this.control = control;
 		this.dice = control.getDice();

@@ -42,9 +42,9 @@ import context.GameState;
  * 
  */
 /**
- * @className: Control
- * @author: wly
- * @date:  2023/12/2
+ * @className Control
+ * @author wly
+ * @date  2023/12/2
  **/
 
 public class Control {

@@ -18,9 +18,9 @@ import model.PlayerModel;
  * 
  */
 /**
- * @className: Players
- * @author: xjy
- * @date:  2023/12/5
+ * @className Players
+ * @author xjy
+ * @date  2023/12/5
  **/
 
 public class Players extends Layer {

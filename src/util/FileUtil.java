@@ -10,9 +10,9 @@ import java.net.URLClassLoader;
 import java.util.HashMap;
 
 /**
- * @className: FileUtil
- * @author: wly
- * @date:  2023/11/24
+ * @className FileUtil
+ * @author wly
+ * @date  2023/11/24
  **/
 
 public class FileUtil {

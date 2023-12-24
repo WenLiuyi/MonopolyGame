@@ -1,9 +1,9 @@
 package model;
 
 /**
- * @className: Tick
- * @author: wly
- * @date:  2023/11/20
+ * @className Tick
+ * @author wly
+ * @date  2023/11/20
  **/
 
 public class Tick {

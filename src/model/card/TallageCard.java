@@ -12,6 +12,11 @@ import model.PlayerModel;
  * 
  *
  */
+/**
+ * @className TallageCard
+ * @author wly
+ * @date  2023/12/6
+ **/
 public class TallageCard extends Card{
 
 	public TallageCard(PlayerModel owner) {

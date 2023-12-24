@@ -26,9 +26,9 @@ import model.buildings.Shop_;
 import model.card.Card;
 
 /**
- * @className: Shop
- * @author: wly
- * @date:  2023/12/7
+ * @className Shop
+ * @author wly
+ * @date  2023/12/7
  **/
 
 public class Shop extends JPanel {

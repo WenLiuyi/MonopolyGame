@@ -39,9 +39,9 @@ import control.GameRunning;
 
 
 /**
- * @className: FrameConfig
- * @author: hcr
- * @date:  2023/11/20
+ * @className FrameConfig
+ * @author hcr
+ * @date  2023/11/20
  **/
 
 public class FrameConfig extends JFrame {

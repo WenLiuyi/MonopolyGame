@@ -2,9 +2,9 @@ package main;
 
 import jmp123.PlayBack;
 /**
- * @className: Music
- * @author: xjy
- * @date:  2023/12/14
+ * @className Music
+ * @author xjy
+ * @date  2023/12/14
  **/
 
 

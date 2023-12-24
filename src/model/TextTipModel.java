@@ -8,9 +8,9 @@ import ui.TextTip;
 import control.Control;
 
 /**
- * @className: TextTipModel
- * @author: xjy
- * @date:  2023/12/5
+ * @className TextTipModel
+ * @author xjy
+ * @date  2023/12/5
  **/
 
 public class TextTipModel extends Tick implements Port{

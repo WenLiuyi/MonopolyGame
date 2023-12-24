@@ -10,6 +10,11 @@ import model.PlayerModel;
  * 
  *
  */
+/**
+ * @className CrossingCard
+ * @author hcr
+ * @date  2023/12/5
+ **/
 public class CrossingCard extends Card{
 
 	public CrossingCard(PlayerModel owner) {

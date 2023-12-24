@@ -22,6 +22,11 @@ import javax.swing.UIManager;
 
 import ui.JPanelGame;
 
+/**
+ * @className EventsModel
+ * @author xjy
+ * @date  2023/12/3
+ **/
 public class MassageSimple extends Massage {
 
 	

@@ -13,6 +13,11 @@ import model.buildings.Building;
  * OK
  *
  */
+/**
+ * @className ReduceLevelCard
+ * @author xjy
+ * @date  2023/12/2
+ **/
 public class ReduceLevelCard extends Card{
 
 	public ReduceLevelCard(PlayerModel owner) {

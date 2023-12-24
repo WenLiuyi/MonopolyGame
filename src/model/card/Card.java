@@ -4,6 +4,12 @@ import java.awt.Image;
 
 import model.PlayerModel;
 
+/**
+ * @className Card
+ * @author xjy
+ * @date  2023/12/3
+ **/
+
 
 public abstract class Card {
 
@@ -54,28 +60,41 @@ public abstract class Card {
 	}
 	
 	/**
-	 * 
+	 * @return int
 	 * 使用卡片效果
 	 * 
 	 * 
 	 */
 	public abstract int useCard ();
 	/**
-	 * 
+	 *
 	 *  卡片持续效果
+	 * @return int
 	 * 
 	 */
 	public int cardBuff(){ return 0;}
 
 
+	/**
+	 *
+	 * @return String
+	 */
 	public String getName() {
 		return name;
 	}
 
+	/**
+	 *
+	 * @return Image
+	 */
 	public Image getImg() {
 		return img;
 	}
 
+	/**
+	 *
+	 * @return PlayerModel
+	 */
 	public PlayerModel getOwner() {
 		return owner;
 	}

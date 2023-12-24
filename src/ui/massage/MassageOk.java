@@ -23,6 +23,11 @@ import javax.swing.UIManager;
 import ui.JPanelGame;
 import ui.ShopButton;
 
+/**
+ * @className PlayerModel
+ * @author wly
+ * @date  2023/12/6
+ **/
 public class MassageOk extends Massage {
 
 	

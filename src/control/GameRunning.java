@@ -15,9 +15,9 @@ import ui.JPanelGame;
  * 
  */
 /**
- * @className: GameRunning
- * @author: xjy
- * @date:  2023/12/2
+ * @className GameRunning
+ * @author xjy
+ * @date  2023/12/2
  **/
 
 public class GameRunning {

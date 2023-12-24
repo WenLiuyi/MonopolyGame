@@ -9,9 +9,9 @@ import model.BackgroundModel;
 import java.awt.Color;
 
 /**
- * @className: Background
- * @author: xjy
- * @date:  2023/12/2
+ * @className Background
+ * @author xjy
+ * @date  2023/12/2
  **/
 
 public class Background extends Layer {
@@ -21,6 +21,15 @@ public class Background extends Layer {
 	private BackgroundModel background = null;
 	private JPanelGame panel;
 
+	/**
+	 *
+	 * @param x
+	 * @param y
+	 * @param w
+	 * @param h
+	 * @param background
+	 * @param panel
+	 */
 	public Background(int x, int y, int w, int h,
 			BackgroundModel background,JPanelGame panel) {
 		super(x, y, w, h);
@@ -28,21 +37,34 @@ public class Background extends Layer {
 		this.panel = panel;
 	}
 
+	/**
+	 * 绘制背景
+	 * @param g  the <code>Graphics</code> context in which to paint
+	 */
 	public void paint(Graphics g) {
-		// 绘制背景
 		this.paintBg(g);
 	}
-	//将窗体隐藏
+
+	/**
+	 * 将窗体隐藏
+	 */
 	public void moveToBack() {
 		this.panel.getLayeredPane().moveToBack(this);
 	}
 
-	//将窗体显现
+	/**
+	 * 将窗体显现
+	 */
 	public void moveToFront() {
 		this.panel.getLayeredPane().moveToFront(this);
 	}
 	
 	//背景绘制方法
+
+	/**
+	 *
+	 * @param g
+	 */
 	public void paintBg(Graphics g){
 		// 绘制背景图像
 		g.drawImage(this.bg, 0, 0, getWidth(), getHeight(), null);
@@ -56,7 +78,7 @@ public class Background extends Layer {
 		g.fillRect(0, getHeight() - borderWidth, getWidth(), borderWidth); // 下边框
 
 	}
-	
+
 
 	@Override
 	public void startPanel() {

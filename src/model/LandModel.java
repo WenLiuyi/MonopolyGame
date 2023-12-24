@@ -8,9 +8,9 @@ import javax.swing.ImageIcon;
 import control.GameRunning;
 
 /**
- * @className: LandModel
- * @author: wly
- * @date:  2023/12/5
+ * @className LandModel
+ * @author wly
+ * @date  2023/12/5
  **/
 
 public class LandModel extends Tick implements Port {

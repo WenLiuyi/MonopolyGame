@@ -7,9 +7,9 @@ import context.GameState;
 import control.Control;
 
 /**
- * @className: Hospital
- * @author: hcr
- * @date:  2023/12/7
+ * @className Hospital
+ * @author hcr
+ * @date  2023/12/7
  **/
 
 public class Hospital extends Building {

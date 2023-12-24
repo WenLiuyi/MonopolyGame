@@ -8,9 +8,9 @@ import java.awt.*;
 
 @SuppressWarnings("serial")
 /**
- * @className: JFrameGame
- * @author: wly
- * @date:  2023/11/27
+ * @className JFrameGame
+ * @author wly
+ * @date  2023/11/27
  **/
 
 public class JFrameGame extends JFrame {

@@ -13,6 +13,11 @@ import model.buildings.Building;
  * 
  * 
  */
+/**
+ * @className ChangeCard
+ * @author wly
+ * @date  2023/12/6
+ **/
 public class ChangeCard extends Card {
 
 	public ChangeCard(PlayerModel owner) {

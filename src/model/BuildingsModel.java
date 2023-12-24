@@ -15,9 +15,9 @@ import model.buildings.Prison;
 import model.buildings.Shop_;
 
 /**
- * @className: BuildingsModel
- * @author: hcr
- * @date:  2023/12/4
+ * @className BuildingsModel
+ * @author hcr
+ * @date  2023/12/4
  **/
 
 public class BuildingsModel extends Tick implements Port{
@@ -100,15 +100,18 @@ public class BuildingsModel extends Tick implements Port{
 	 * 
 	 * 获得房屋表
 	 * 
-	 * @return
+	 * @return List
 	 */
 	public List<Building> getBuilding(){
 		return buildings;
 	}
+
 	/**
-	 * 
+	 *
+	 * @param x
+	 * @param y
+	 * @return
 	 * 获得当前位置房屋
-	 * 
 	 */
 	public Building getBuilding(int x,int y){
 		for (Building temp : this.buildings){
